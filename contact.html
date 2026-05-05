@@ -16,8 +16,11 @@
     <meta property="og:site_name" content="InstaDP">
     <meta property="og:title" content="Contact Us - InstaDp">
     <meta property="og:description" content="Contact InstaDp for support, feedback, or questions about our Instagram profile picture downloader tool.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/romitkryadav/instadp/main/instalogo.png">
+    <meta property="og:image" content="https://instadpdownload.com/instalogo.png">
     <meta property="og:image:alt" content="InstaDP logo">
+    
+     <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/instalogo.png">
     
     <!-- Twitter Card -->
     <meta property="twitter:card" content="summary_large_image">
@@ -26,7 +29,7 @@
     <meta property="twitter:url" content="https://instadpdownload.com/contact">
     <meta property="twitter:title" content="Contact Us - InstaDp">
     <meta property="twitter:description" content="Contact InstaDp for support, feedback, or questions about our Instagram profile picture downloader tool.">
-    <meta property="twitter:image" content="https://raw.githubusercontent.com/romitkryadav/instadp/main/instalogo.png">
+    <meta property="twitter:image" content="/instalogo.png">
     <meta property="twitter:image:alt" content="InstaDP logo">
     
     <link rel="stylesheet" href="/romitstyle.css">
@@ -111,7 +114,7 @@ Contact
 
         <div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 sm:p-12 mb-12">
             <form action="https://formsubmit.co/romitkryadav@gmail.com" method="POST">
-                <input type="hidden" name="_next" value="thank">
+                <input type="hidden" name="_next" value="https://instadpdownload.com/thank.html">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_template" value="box">
                 
@@ -130,8 +133,12 @@ Contact
                     <textarea name="message" required class="w-full px-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-lg h-40" placeholder="How can we help?"></textarea>
                 </div>
                 
-                <button type="submit" class="w-full bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 flex items-center justify-center gap-2">
-                    Send Message
+                <button type="submit" id="submitBtn" class="w-full bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 flex items-center justify-center gap-2">
+                    <span id="btnText">Send Message</span>
+                    <svg id="loadingIcon" class="w-5 h-5 animate-spin hidden" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
                 </button>
             </form>
         </div>
@@ -180,6 +187,17 @@ Contact
     <script src="/menu.js"></script>
     <script>
         lucide.createIcons();
+        
+        const form = document.querySelector('form');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const loadingIcon = document.getElementById('loadingIcon');
+        
+        form.addEventListener('submit', function(e) {
+            submitBtn.disabled = true;
+            btnText.textContent = 'Sending...';
+            loadingIcon.classList.remove('hidden');
+        });
     </script>
 </body>
 </html>
