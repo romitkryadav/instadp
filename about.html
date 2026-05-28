@@ -28,7 +28,23 @@
 <link rel=stylesheet href=/romitstyle.css>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel=stylesheet>
 <script src=https://unpkg.com/lucide@latest></script>
-<style>body{font-family:Inter,sans-serif}.scroll-mt-20{scroll-margin-top:5rem}@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}.animate-spin{animation:spin 1s linear infinite}.hidden{display:none}</style>
+<style>
+body{font-family:Inter,sans-serif}
+.scroll-mt-20{scroll-margin-top:5rem}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.animate-spin{animation:spin 1s linear infinite}
+.hidden{display:none}
+/* Instagram theme colors */
+.instagram-gradient {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f77737, #fcaf45, #ffdc80);
+}
+.instagram-gradient-text {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f77737, #fcaf45, #ffdc80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+</style>
 </head>
 
 <script type="application/ld+json">
@@ -42,24 +58,24 @@
 </script>
 
 
-<body class="min-h-screen bg-[#f5f5f5] text-[#1a1a1a] selection:bg-blue-100">
-<nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+<body class="min-h-screen bg-black text-white selection:bg-blue-500/30">
+<nav class="bg-black border-b border-[#262626] sticky top-0 z-50">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between h-16 items-center">
 <a href=/ class="flex items-center space-x-2 group">
 <img src=/instalogo.png alt="InstaDP Logo" class="w-10 h-10 object-contain">
-<span class="text-xl font-bold text-gray-900 tracking-tight">Insta<span class=text-blue-600>DP</span></span>
+<span class="text-xl font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DP</span></span>
 </a>
-<div id=desktopMenu class="desktop-menu space-x-8 text-sm font-medium text-gray-600">
-<a href=/ class="hover:text-blue-600 transition-colors">Home</a>
-<a href=https://threadsgrab.com/ class="hover:text-blue-600 transition-colors">Threads Downloader</a>
-<a href=https://fbviddl.com/ class="hover:text-blue-600 transition-colors">Facebook Downloader</a>
+<div id=desktopMenu class="desktop-menu space-x-8 text-sm font-medium text-gray-400">
+<a href=/ class="hover:text-white transition-colors">Home</a>
+<a href=https://threadsgrab.com/ class="hover:text-white transition-colors">Threads Downloader</a>
+<a href=https://fbviddl.com/ class="hover:text-white transition-colors">Facebook Downloader</a>
 
-<a href=/about class="text-blue-600 font-bold">About</a>
-<a href=/blog class="hover:text-blue-600 transition-colors">Blog</a>
-<a href=/contact class="hover:text-blue-600 transition-colors">Contact</a>
+<a href=/about class="text-white font-bold">About</a>
+<a href=/blog class="hover:text-white transition-colors">Blog</a>
+<a href=/contact class="hover:text-white transition-colors">Contact</a>
 </div>
-<button id=mobileMenuBtn class="md:hidden p-2 text-gray-600 hover:text-blue-600 transition-colors">
+<button id=mobileMenuBtn class="md:hidden p-2 text-gray-400 hover:text-white transition-colors">
 <svg id=menuIcon class="w-6 h-6" fill=none stroke=currentColor viewBox="0 0 24 24">
 <path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M4 6h16M4 12h16M4 18h16"></path>
 </svg>
@@ -69,14 +85,14 @@
 </button>
 </div>
 </div>
-<div id=mobileMenu class="md:hidden fixed top-0 right-0 bottom-0 w-72 max-w-[80%] bg-white z-40 transform transition-transform duration-300 ease-in-out translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.1)]">
+<div id=mobileMenu class="md:hidden fixed top-0 right-0 bottom-0 w-72 max-w-[80%] bg-black border-l border-[#262626] z-40 transform transition-transform duration-300 ease-in-out translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.5)]">
 <div class="flex flex-col h-full">
-<div class="h-16 flex items-center justify-between px-6 border-b border-gray-100">
+<div class="h-16 flex items-center justify-between px-6 border-b border-[#262626]">
 <a href=/ class="flex items-center space-x-2">
 <img src=/instalogo.png alt="InstaDP Logo" class="w-8 h-8 object-contain">
-<span class="text-base font-bold text-gray-900 tracking-tight">Insta<span class=text-blue-600>DP</span></span>
+<span class="text-base font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DP</span></span>
 </a>
-<button id=closeMenuBtn class="p-2 text-gray-600 hover:text-blue-600 transition-colors">
+<button id=closeMenuBtn class="p-2 text-gray-400 hover:text-white transition-colors">
 <svg class="w-6 h-6" fill=none stroke=currentColor viewBox="0 0 24 24">
 <path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M6 18L18 6M6 6l12 12"></path>
 </svg>
@@ -84,22 +100,22 @@
 </div>
 <div class="flex-grow overflow-y-auto">
 <nav class="flex flex-col">
-<a href=/ class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/ class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
 Home
 </a>
-<a href=https://threadsgrab.com/ class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=https://threadsgrab.com/ class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
 Threads Downloader
 </a>
-<a href=https://fbviddl.com/ class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=https://fbviddl.com/ class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
 Facebook Downloader
 </a>
-<a href=/about class="flex items-center px-6 py-4 text-blue-600 font-bold bg-gray-50 border-b border-gray-100 transition-all">
+<a href=/about class="flex items-center px-6 py-4 text-white font-bold bg-[#1c1c1c] border-b border-[#262626] transition-all">
 About
 </a>
-<a href=/blog class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/blog class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
 Blog
 </a>
-<a href=/contact class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/contact class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
 Contact
 </a>
 </nav>
@@ -110,28 +126,28 @@ Contact
 <main class="max-w-4xl mx-auto px-4 py-12 sm:py-20">
 <div class="text-center mb-12">
 <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 tracking-tight">
-About <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">InstaDp</span>
+About <span class="instagram-gradient-text">InstaDp</span>
 </h1>
-<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+<p class="text-lg text-gray-400 max-w-2xl mx-auto">
 Your trusted tool for downloading Instagram profile pictures in high resolution
 </p>
 </div>
-<div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 sm:p-12 mb-12">
-<h2 class="text-3xl font-bold mb-6">About InstaDp</h2>
-<p class="text-gray-700 leading-relaxed mb-6">
+<div class="bg-[#121212] rounded-3xl shadow-sm border border-[#262626] p-8 sm:p-12 mb-12">
+<h2 class="text-3xl font-bold mb-6 text-white">About InstaDp</h2>
+<p class="text-gray-400 leading-relaxed mb-6">
 Welcome to our Instagram Display Picture Download Tool! This tool was designed as an easy way for people to find and download Instagram DP's. There is no need to complicate the process of getting full-size HD quality images of Instagram Profile Pictures.
-</p> <p class="text-gray-700 leading-relaxed mb-6">We noticed how hard it is to see the full-size versions of Instagram profile pictures (each person has their own unique size). Many people would zoom in on the picture or take a screenshot of the picture trying to make it look nice. Unfortunately, neither of these methods will give you a good quality image to display. The only way to have access to Instagram Profile Pictures in high quality, with ease, is with an easy and clean way to search/display Instagram profile picture images.</p>
+</p> <p class="text-gray-400 leading-relaxed mb-6">We noticed how hard it is to see the full-size versions of Instagram profile pictures (each person has their own unique size). Many people would zoom in on the picture or take a screenshot of the picture trying to make it look nice. Unfortunately, neither of these methods will give you a good quality image to display. The only way to have access to Instagram Profile Pictures in high quality, with ease, is with an easy and clean way to search/display Instagram profile picture images.</p>
 
-<p class="text-gray-700 leading-relaxed mb-6">
+<p class="text-gray-400 leading-relaxed mb-6">
 The website is built to provide users with a seamless user experience with no additional steps. You don’t have to download any applications, create an account, or log into your Instagram account to use our service. Just copy the username or profile link of the profile you’d like to view and the tool will show the profile photo in a higher-quality image immediately.
 </p>
-<p class="text-gray-700 leading-relaxed mb-6">Speed, simplicity, and accessibility are our top priorities. The downloader will work right from your browser, regardless if you're on a mobile device, tablet or desktop computer, and will be compatible with all browsers and devices.</p>
-<p class="text-gray-700 leading-relaxed mb-6">Yes, Instagram users (both normal users and "creators") use this tool to see how an Instagram "DP" (Display Picture) looks smaller than the original image. Some visitors may utilize this tool for saving their own photos (e.g., losing a previous personal photo) while others may utilize it for finding public profiles (e.g., brand logos or Creator DP) in a larger image than what they normally can view.</p>
-<p class="text-gray-700 leading-relaxed mb-6">Our team continually works to make the site faster, fewer features, and more user-friendly for all users using the tool; the goal is not to provide non-functioning features or slow down (or prevent) users from being able to use an Instagram DP viewer when needed.</p>
+<p class="text-gray-400 leading-relaxed mb-6">Speed, simplicity, and accessibility are our top priorities. The downloader will work right from your browser, regardless if you're on a mobile device, tablet or desktop computer, and will be compatible with all browsers and devices.</p>
+<p class="text-gray-400 leading-relaxed mb-6">Yes, Instagram users (both normal users and "creators") use this tool to see how an Instagram "DP" (Display Picture) looks smaller than the original image. Some visitors may utilize this tool for saving their own photos (e.g., losing a previous personal photo) while others may utilize it for finding public profiles (e.g., brand logos or Creator DP) in a larger image than what they normally can view.</p>
+<p class="text-gray-400 leading-relaxed mb-6">Our team continually works to make the site faster, fewer features, and more user-friendly for all users using the tool; the goal is not to provide non-functioning features or slow down (or prevent) users from being able to use an Instagram DP viewer when needed.</p>
 
 
-<h2 class="text-2xl font-bold mb-6 mt-10">Reasons why you should use an Instagram DP (Display Picture) Downloader:</h2>
-<ul class="list-disc list-inside text-gray-700 leading-relaxed mb-6 space-y-2">
+<h2 class="text-2xl font-bold mb-6 mt-10 text-white">Reasons why you should use an Instagram DP (Display Picture) Downloader:</h2>
+<ul class="list-disc list-inside text-gray-400 leading-relaxed mb-6 space-y-2">
 <li>View Instagram profile images in High Definition quality</li>
 <li>Download full-size images of Instagram profiles</li>
 <li>Works on Android, Apple iOS, Microsoft Windows, and Apple Macintosh</li>
@@ -139,45 +155,45 @@ The website is built to provide users with a seamless user experience with no ad
 <li>Clean and easy-to-use interface</li>
 </ul>
 
-<p class="text-gray-700 leading-relaxed mb-4">
+<p class="text-gray-400 leading-relaxed mb-4">
 We think everyone should be able to use our simple and easy-to-use online tools. That’s why we maintain our focus on providing a simple, simple, and easy-to-navigate experience for users to easily access and view or download their Instagram profile pictures, without the need to be confused by too many options.
 </p>
-<p class="text-gray-700 leading-relaxed">
+<p class="text-gray-400 leading-relaxed">
 Thank you again for using our Instagram Profile Picture Downloader!
 </p>
 </div>
 </main>
-<footer class="bg-white border-t border-gray-200 py-12">
+<footer class="bg-black border-t border-[#262626] py-12">
 <div class="max-w-7xl mx-auto px-4">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div class="text-center md:text-left">
 <div class="flex items-center justify-center md:justify-start gap-2 mb-4">
 <img src=https://instadpdownload.com/instalogo.png alt="InstaDP Logo" class="w-8 h-8 object-contain">
-<span class="font-bold text-lg">InstaDP</span>
+<span class="font-bold text-lg text-white">InstaDP</span>
 </div>
 <p class="text-gray-500 text-sm">
 Download Instagram profile pictures in high resolution for free.
 </p>
 </div>
 <div class="text-center md:text-left">
-<h3 class="font-bold text-lg mb-4">Quick Links</h3>
+<h3 class="font-bold text-lg mb-4 text-white">Quick Links</h3>
 <div class=space-y-2>
-<a href=/ class="text-gray-600 hover:text-blue-600 transition-colors text-sm block">Home</a>
-<a href=/about class="text-gray-600 hover:text-blue-600 transition-colors text-sm block">About</a>
-<a href=/blog class="text-gray-600 hover:text-blue-600 transition-colors text-sm block">Blog</a>
-<a href=/contact class="text-gray-600 hover:text-blue-600 transition-colors text-sm block">Contact</a>
+<a href=/ class="text-gray-400 hover:text-white transition-colors text-sm block">Home</a>
+<a href=/about class="text-gray-400 hover:text-white transition-colors text-sm block">About</a>
+<a href=/blog class="text-gray-400 hover:text-white transition-colors text-sm block">Blog</a>
+<a href=/contact class="text-gray-400 hover:text-white transition-colors text-sm block">Contact</a>
 </div>
 </div>
 <div class="text-center md:text-left">
-<h3 class="font-bold text-lg mb-4">Legal</h3>
+<h3 class="font-bold text-lg mb-4 text-white">Legal</h3>
 <div class=space-y-2>
 
-<a href=/privacy class="text-gray-600 hover:text-blue-600 transition-colors text-sm block">Privacy Policy</a>
-<a href=/disclaimer class="text-gray-600 hover:text-blue-600 transition-colors text-sm block">Disclaimer</a>
+<a href=/privacy class="text-gray-400 hover:text-white transition-colors text-sm block">Privacy Policy</a>
+<a href=/disclaimer class="text-gray-400 hover:text-white transition-colors text-sm block">Disclaimer</a>
 </div>
 </div>
 </div>
-<div class="border-t border-gray-200 mt-8 pt-8 text-center">
+<div class="border-t border-[#262626] mt-8 pt-8 text-center">
 <p class="text-gray-500 text-sm">
 © 2026 InstaDP. Not affiliated with Instagram or Meta.
 </p>

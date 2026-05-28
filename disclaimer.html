@@ -27,25 +27,41 @@
 <link rel=stylesheet href=/romitstyle.css>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel=stylesheet>
 <script src=https://unpkg.com/lucide@latest></script>
-<style>body{font-family:Inter,sans-serif}.scroll-mt-20{scroll-margin-top:5rem}@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}.animate-spin{animation:spin 1s linear infinite}.hidden{display:none}</style>
+<style>
+body{font-family:Inter,sans-serif}
+.scroll-mt-20{scroll-margin-top:5rem}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.animate-spin{animation:spin 1s linear infinite}
+.hidden{display:none}
+/* Instagram theme colors */
+.instagram-gradient {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f77737, #fcaf45, #ffdc80);
+}
+.instagram-gradient-text {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f77737, #fcaf45, #ffdc80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+</style>
 </head>
-<body class="min-h-screen bg-[#f5f5f5] text-[#1a1a1a] selection:bg-blue-100">
-<nav class="bg-white border-b border-gray-100 sticky top-0 z-50">
+<body class="min-h-screen bg-black text-white selection:bg-blue-500/30">
+<nav class="bg-black border-b border-[#262626] sticky top-0 z-50">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between h-16 items-center">
 <a href=/ class="flex items-center space-x-2 group">
 <img src=https://instadpdownload.com/instalogo.png alt="InstaDP Logo" class="w-10 h-10 object-contain">
-<span class="text-xl font-bold text-gray-900 tracking-tight">Insta<span class=text-blue-600>DP</span></span>
+<span class="text-xl font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DP</span></span>
 </a>
-<div id=desktopMenu class="desktop-menu space-x-8 text-sm font-medium text-gray-600">
-<a href=/ class="hover:text-blue-600 transition-colors">Home</a>
-<a href=https://threadsgrab.com/ class="hover:text-blue-600 transition-colors">Threads Downloader</a>
-<a href=https://fbviddl.com/ class="hover:text-blue-600 transition-colors">Facebook Downloader</a>
-<a href=/about class="hover:text-blue-600 transition-colors">About</a>
-<a href=/blog class="hover:text-blue-600 transition-colors">Blog</a>
-<a href=/contact class="hover:text-blue-600 transition-colors">Contact</a>
+<div id=desktopMenu class="desktop-menu space-x-8 text-sm font-medium text-gray-400">
+<a href=/ class="hover:text-white transition-colors">Home</a>
+<a href=https://threadsgrab.com/ class="hover:text-white transition-colors">Threads Downloader</a>
+<a href=https://fbviddl.com/ class="hover:text-white transition-colors">Facebook Downloader</a>
+<a href=/about class="hover:text-white transition-colors">About</a>
+<a href=/blog class="hover:text-white transition-colors">Blog</a>
+<a href=/contact class="hover:text-white transition-colors">Contact</a>
 </div>
-<button id=mobileMenuBtn class="md:hidden p-2 text-gray-600 hover:text-blue-600 transition-colors">
+<button id=mobileMenuBtn class="md:hidden p-2 text-gray-400 hover:text-white transition-colors">
 <svg id=menuIcon class="w-6 h-6" fill=none stroke=currentColor viewBox="0 0 24 24">
 <path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M4 6h16M4 12h16M4 18h16"></path>
 </svg>
@@ -55,14 +71,14 @@
 </button>
 </div>
 </div>
-<div id=mobileMenu class="md:hidden fixed top-0 right-0 bottom-0 w-72 max-w-[80%] bg-white z-40 transform transition-transform duration-300 ease-in-out translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.1)]">
+<div id=mobileMenu class="md:hidden fixed top-0 right-0 bottom-0 w-72 max-w-[80%] bg-black border-l border-[#262626] z-40 transform transition-transform duration-300 ease-in-out translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.5)]">
 <div class="flex flex-col h-full">
-<div class="h-16 flex items-center justify-between px-6 border-b border-gray-100">
+<div class="h-16 flex items-center justify-between px-6 border-b border-[#262626]">
 <a href=/ class="flex items-center space-x-2">
 <img src=https://instadpdownload.com/instalogo.png alt="InstaDP Logo" class="w-8 h-8 object-contain">
-<span class="text-base font-bold text-gray-900 tracking-tight">Insta<span class=text-blue-600>DP</span></span>
+<span class="text-base font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DP</span></span>
 </a>
-<button id=closeMenuBtn class="p-2 text-gray-600 hover:text-blue-600 transition-colors">
+<button id=closeMenuBtn class="p-2 text-gray-400 hover:text-white transition-colors">
 <svg class="w-6 h-6" fill=none stroke=currentColor viewBox="0 0 24 24">
 <path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M6 18L18 6M6 6l12 12"></path>
 </svg>
@@ -70,18 +86,22 @@
 </div>
 <div class="flex-grow overflow-y-auto">
 <nav class="flex flex-col">
-<a href=/ class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/ class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
 Home
 </a>
-<a href=https://threadsgrab.com/ class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">Threads Downloader</a>
-<a href=https://fbviddl.com/ class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">Facebook Downloader</a>
-<a href=/about class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=https://threadsgrab.com/ class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
+Threads Downloader
+</a>
+<a href=https://fbviddl.com/ class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
+Facebook Downloader
+</a>
+<a href=/about class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
 About
 </a>
-<a href=/blog class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/blog class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
 Blog
 </a>
-<a href=/contact class="flex items-center px-6 py-4 text-gray-900 font-medium hover:bg-gray-50 hover:text-blue-600 border-b border-gray-100 transition-all">
+<a href=/contact class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
 Contact
 </a>
 </nav>
@@ -92,117 +112,117 @@ Contact
 <main class="max-w-4xl mx-auto px-4 py-12 sm:py-20">
 <div class="text-center mb-12">
 <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 tracking-tight">
-<span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Disclaimer</span>
+<span class="instagram-gradient-text">Disclaimer</span>
 </h1>
-<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+<p class="text-lg text-gray-400 max-w-2xl mx-auto">
 Last updated: May 2026
 </p>
 </div>
-<div class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 sm:p-12 mb-12 space-y-8">
+<div class="bg-[#121212] rounded-3xl shadow-sm border border-[#262626] p-8 sm:p-12 mb-12 space-y-8">
 <section>
-<h2 class="text-2xl font-bold mb-4">1. General information</h2>
-<p class="text-gray-700 leading-relaxed">
+<h2 class="text-2xl font-bold mb-4 text-white">1. General information</h2>
+<p class="text-gray-400 leading-relaxed">
 This website has tools for viewing and downloading high-quality Instagram Profile Pictures. By using the service provided on this website, you agree to the terms described in this disclaimer.
 </p>
 </section>
 
 <section>
-<h2 class="text-2xl font-bold mb-4">2. No Affiliation with Instagram</h2>
-<p class="text-gray-700 leading-relaxed">
+<h2 class="text-2xl font-bold mb-4 text-white">2. No Affiliation with Instagram</h2>
+<p class="text-gray-400 leading-relaxed">
 Insta DP Downloader is an independent site and is in no way, shape or form affiliated/associated with/authorized/endorsed by/connected to Instagram / Meta / Facebook.
 </p>
-<p class="text-gray-700 leading-relaxed mt-4">
+<p class="text-gray-400 leading-relaxed mt-4">
 All trademarks, trade names, logos, product names, and other proprietary materials that appear on the site remain with their respective owners making no claim of ownership.
 </p>
 </section>
 
 <section>
-<h2 class="text-2xl font-bold mb-4">3.Content Ownership</h2>
-<p class="text-gray-700 leading-relaxed">
+<h2 class="text-2xl font-bold mb-4 text-white">3.Content Ownership</h2>
+<p class="text-gray-400 leading-relaxed">
 The original source of all profile photos, images, trademarks, and any other media available on Insta DP Downloaders belongs to the respective creators/owners of the media.
 </p>
-<p class="text-gray-700 leading-relaxed mt-4">
+<p class="text-gray-400 leading-relaxed mt-4">
 Insta DP Downloader will not store, upload or host any Instagram profile photo on Insta DP Downloaders servers. This tool processes Instagram profile links that the general public can view or download their profile images.</p>
-<p class="text-gray-700 leading-relaxed mt-4">Users are fully accountable for following copyright & intellectual property laws with regard to the rights of content creators.</p>
+<p class="text-gray-400 leading-relaxed mt-4">Users are fully accountable for following copyright & intellectual property laws with regard to the rights of content creators.</p>
 </section>
 
 <section>
-<h2 class="text-2xl font-bold mb-4">4. Personal Use Only</h2>
-<p class="text-gray-700 leading-relaxed">
+<h2 class="text-2xl font-bold mb-4 text-white">4. Personal Use Only</h2>
+<p class="text-gray-400 leading-relaxed">
 The purpose of this tool is solely for Personal Research / Research purposes only. Downloads are only allowed if permission is obtained from the original owner/creator of the material prior to any reuse, distribution, alteration or use in commerce.
 </p>
 </section>
 
 <section>
-<h2 class="text-2xl font-bold mb-4">5. Public Content Only</h2>
-<p class="text-gray-700 leading-relaxed">
+<h2 class="text-2xl font-bold mb-4 text-white">5. Public Content Only</h2>
+<p class="text-gray-400 leading-relaxed">
 Only publicly accessible Instagram accounts/profile pictures can be downloaded using Insta DP Downloader.
 </p>
-<p class="text-gray-700 leading-relaxed mt-4">Insta DP Downloader does not support activity from:</p>
-<ul class="list-disc list-inside text-gray-700 leading-relaxed mt-4">
+<p class="text-gray-400 leading-relaxed mt-4">Insta DP Downloader does not support activity from:</p>
+<ul class="list-disc list-inside text-gray-400 leading-relaxed mt-4">
 <li>Restrictive profiles</li>
 <li>Private accounts</li>
 <li>Accessing activity needing Login Authorisation</li>
 </ul>
-<p class="text-gray-700 leading-relaxed mt-4">The tool will not process any of the above because it only processes publicly available content on Instagram.</p>
+<p class="text-gray-400 leading-relaxed mt-4">The tool will not process any of the above because it only processes publicly available content on Instagram.</p>
 </section>
 
 <section>
-<h2 class="text-2xl font-bold mb-4">6. Accuracy of Information</h2>
-<p class="text-gray-700 leading-relaxed">
+<h2 class="text-2xl font-bold mb-4 text-white">6. Accuracy of Information</h2>
+<p class="text-gray-400 leading-relaxed">
 The objective of our company is to continuously provide an accurate, secure, and functioning website. Nevertheless, we cannot guarantee continuous service; total accuracy of all information and all services offered; nor the uninterrupted operation of any site or tool related to the website.
 </p>
-<p class="text-gray-700 leading-relaxed mt-4">At times, the availability of the website may be affected due to technical problems, site maintenance or changes made by Instagram.</p>
+<p class="text-gray-400 leading-relaxed mt-4">At times, the availability of the website may be affected due to technical problems, site maintenance or changes made by Instagram.</p>
 </section>
 <section>
-<h2 class="text-2xl font-bold mb-4">7. Use at Your Own Risk</h2>
-<p class="text-gray-700 leading-relaxed">When you use Insta DP Downloader, you agree to use the service “as is” and “as available”. We do not accept any liability for how users downloaded images were used, or for any losses or damages incurred as a result of using the website, or for any other issues resulting from the website or its services.</p>
+<h2 class="text-2xl font-bold mb-4 text-white">7. Use at Your Own Risk</h2>
+<p class="text-gray-400 leading-relaxed">When you use Insta DP Downloader, you agree to use the service “as is” and “as available”. We do not accept any liability for how users downloaded images were used, or for any losses or damages incurred as a result of using the website, or for any other issues resulting from the website or its services.</p>
 </section>
 <section>
-<h2 class="text-2xl font-bold mb-4">8. External Links</h2>
-<p class="text-gray-700 leading-relaxed">We are not responsible for any Third party links or sites that may be found on our site, or the content contained within those third party links/sites or the privacy practices and policies that may govern external third party links/sites and use of their contents.</p>
+<h2 class="text-2xl font-bold mb-4 text-white">8. External Links</h2>
+<p class="text-gray-400 leading-relaxed">We are not responsible for any Third party links or sites that may be found on our site, or the content contained within those third party links/sites or the privacy practices and policies that may govern external third party links/sites and use of their contents.</p>
 </section>
 <section>
-<h2 class="text-2xl font-bold mb-4">9. Contact Us</h2>
-<p class="text-gray-700 leading-relaxed">
+<h2 class="text-2xl font-bold mb-4 text-white">9. Contact Us</h2>
+<p class="text-gray-400 leading-relaxed">
 You can reach out to us through the Contact page on this website if you have any questions about this disclaimer.
 </p>
-<p class="text-gray-700 leading-relaxed mt-4">
+<p class="text-gray-400 leading-relaxed mt-4">
 contact us: https://instadpdownload.com/contact
 </p>
 </section>
 </div>
 </main>
-<footer class="bg-white border-t border-gray-200 py-12">
+<footer class="bg-black border-t border-[#262626] py-12">
 <div class="max-w-7xl mx-auto px-4">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div class="text-center md:text-left">
 <div class="flex items-center justify-center md:justify-start gap-2 mb-4">
 <img src=https://instadpdownload.com/instalogo.png alt="InstaDP Logo" class="w-8 h-8 object-contain">
-<span class="font-bold text-lg">InstaDP</span>
+<span class="font-bold text-lg text-white">InstaDP</span>
 </div>
 <p class="text-gray-500 text-sm">
 Download Instagram profile pictures in high resolution for free.
 </p>
 </div>
 <div class="text-center md:text-left">
-<h3 class="font-bold text-lg mb-4">Quick Links</h3>
+<h3 class="font-bold text-lg mb-4 text-white">Quick Links</h3>
 <div class=space-y-2>
-<a href=/ class="text-gray-600 hover:text-blue-600 transition-colors text-sm block">Home</a>
-<a href=/about class="text-gray-600 hover:text-blue-600 transition-colors text-sm block">About</a>
-<a href=/blog class="text-gray-600 hover:text-blue-600 transition-colors text-sm block">Blog</a>
-<a href=/contact class="text-gray-600 hover:text-blue-600 transition-colors text-sm block">Contact</a>
+<a href=/ class="text-gray-400 hover:text-white transition-colors text-sm block">Home</a>
+<a href=/about class="text-gray-400 hover:text-white transition-colors text-sm block">About</a>
+<a href=/blog class="text-gray-400 hover:text-white transition-colors text-sm block">Blog</a>
+<a href=/contact class="text-gray-400 hover:text-white transition-colors text-sm block">Contact</a>
 </div>
 </div>
 <div class="text-center md:text-left">
-<h3 class="font-bold text-lg mb-4">Legal</h3>
+<h3 class="font-bold text-lg mb-4 text-white">Legal</h3>
 <div class=space-y-2>
-<a href=/privacy class="text-gray-600 hover:text-blue-600 transition-colors text-sm block">Privacy Policy</a>
-<a href=/disclaimer class="text-gray-600 hover:text-blue-600 transition-colors text-sm block">Disclaimer</a>
+<a href=/privacy class="text-gray-400 hover:text-white transition-colors text-sm block">Privacy Policy</a>
+<a href=/disclaimer class="text-gray-400 hover:text-white transition-colors text-sm block">Disclaimer</a>
 </div>
 </div>
 </div>
-<div class="border-t border-gray-200 mt-8 pt-8 text-center">
+<div class="border-t border-[#262626] mt-8 pt-8 text-center">
 <p class="text-gray-500 text-sm">
 © 2026 InstaDP. Not affiliated with Instagram or Meta.
 </p>
