@@ -31,6 +31,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel=stylesheet">
 <script src=https://unpkg.com/lucide@latest></script>
 <style>
+/* Base styles */
+html, body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 body{font-family:Inter,sans-serif}
 .scroll-mt-20{scroll-margin-top:5rem}
 @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
@@ -45,6 +53,34 @@ body{font-family:Inter,sans-serif}
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+/* Mobile responsive styles */
+@media (max-width: 480px) {
+    #reelUrlInput {
+        padding-right: 6rem;
+    }
+    .comparison-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .comparison-table-wrapper table {
+        min-width: 100%;
+        width: auto;
+        font-size: 0.75rem;
+    }
+    .comparison-table-wrapper th,
+    .comparison-table-wrapper td {
+        padding: 0.5rem;
+    }
+}
+@media (max-width: 768px) {
+    .comparison-table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .comparison-table-wrapper table {
+        min-width: 100%;
+    }
 }
 </style>
 </head>
@@ -211,7 +247,7 @@ As the downloads occur directly inside your browser, you do not have to download
 </section>
 <h2 class="text-2xl font-bold text-center mb-8 text-white">Quick Comparison of insta Downloaders</h2>
 <div class=comparison-table-wrapper>
-<table class="comparison-table mx-auto bg-[#121212] border-collapse border border-[#262626] shadow-lg rounded-lg" style=min-width:700px;width:auto>
+<table class="comparison-table mx-auto bg-[#121212] border-collapse border border-[#262626] shadow-lg rounded-lg w-full">
 <thead>
 <tr class=bg-[#262626]>
 <th class="py-4 px-6 text-left font-bold text-white border-b border-[#262626]">Tool</th>
