@@ -138,6 +138,17 @@ body{font-family:Inter,sans-serif}
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+.instagram-gradient-spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid transparent;
+    border-top-color: #405de6;
+    border-right-color: #e1306c;
+    border-bottom-color: #ffdc80;
+    border-left-color: #833ab4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
 </style>
 </head>
 <body class="min-h-screen bg-black text-white selection:bg-blue-500/30">
@@ -229,7 +240,7 @@ Instagram DP <span class="instagram-gradient-text">Downloader </span>
 </div>
 </form>
 <div id=loadingState class="hidden flex flex-col items-center justify-center py-12">
-<i data-lucide=loader-2 class="w-12 h-12 text-blue-600 animate-spin mb-4"></i>
+<div class="instagram-gradient-spinner mb-6"></div>
 <p class="text-gray-400 font-medium">Fetching profile data...</p>
 </div>
 <div id=errorState class="hidden bg-red-900/20 border border-red-900/30 text-red-400 p-4 rounded-2xl flex items-center gap-3 mb-12">
