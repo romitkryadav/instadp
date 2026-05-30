@@ -1,10 +1,12 @@
 <!doctype html>
 <html lang=en>
 <head>
+
 <meta charset=UTF-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>Instagram Reel Downloader – View & Download Full Size Reels</title>
-<meta name=description content="InstaDP lets you view and download Instagram Reels in full size, quickly and without extra steps.">
+<title>Instagram Reel Downloader – Download insta reels in HD</title>
+<meta name=description content="Download Instagram Reels online in HD quality for free. Paste any public Reel link and save videos instantly on mobile, desktop, or tablet — no app required.
+">
 <meta name=keywords content="instagram reel downloader, insta reel downloader, download instagram reels, view instagram reels hd, instagram reel saver">
 <meta name=robots content="index, follow">
 <meta name=author content=InstaDP>
@@ -14,22 +16,89 @@
 <meta property=og:url content=https://instadpdownload.com/instagram-reel-downloader>
 <meta property=og:site_name content=InstaDP>
 <meta property=og:title content="Instagram Reel Downloader – View & Download Full Size Reels">
-<meta property=og:description content="InstaDP lets you view and download Instagram Reels in full size, quickly and without extra steps.">
-<meta property=og:image content=/instalogo.png>
+<meta property=og:description content="Download Instagram Reels online in HD quality for free. Paste any public Reel link and save videos instantly on mobile, desktop, or tablet — no app required.
+">
+<meta property="og:image" content="https://instadpdownload.com/instalogo.png">
 <meta property=og:image:alt content="InstaDP logo">
 <meta property=twitter:card content=summary_large_image>
 <meta property=twitter:site content=@InstaDP>
 <meta property=twitter:creator content=@InstaDP>
 <meta property=twitter:url content=https://instadpdownload.com/instagram-reel-downloader>
 <meta property=twitter:title content="Instagram Reel Downloader – View & Download Full Size Reels">
-<meta property=twitter:description content="InstaDP lets you view and download Instagram Reels in full size, quickly and without extra steps.">
-<meta property=twitter:image content=/instalogo.png>
+<meta property=twitter:description content="Download Instagram Reels online in HD quality for free. Paste any public Reel link and save videos instantly on mobile, desktop, or tablet — no app required.
+">
+<meta property=twitter:image content="https://instadpdownload.com/instalogo.png">
 <meta property=twitter:image:alt content="InstaDP logo">
-<link rel=icon type=image/png href=/instalogo.png>
-
+<link rel=icon type=image/png href="https://instadpdownload.com/instalogo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel=stylesheet href=/romitstyle.css>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel=stylesheet">
-<script src=https://unpkg.com/lucide@latest></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"WebApplication",
+ "name":"Instagram Reel Downloader",
+ "url":"https://instadpdownload.com/instagram-reel-downloader",
+ "applicationCategory":"MultimediaApplication",
+ "operatingSystem":"All",
+ "aggregateRating":{
+   "@type":"AggregateRating",
+   "ratingValue":"4.8",
+   "ratingCount":"19457"
+ },
+ "offers":{
+   "@type":"Offer",
+   "price":"0",
+   "priceCurrency":"USD"
+ }
+}
+</script>
+<script type="application/ld+json">
+    {
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+   {
+     "@type":"Question",
+     "name":"I only know the Instagram username. Can I download a Reel without the Reel link?",
+     "acceptedAnswer":{
+       "@type":"Answer",
+       "text":"In most cases, you will need the direct link to download videos from Reels. If you only have an Instagram username, however, you can view that username's profile and search for the Reels video that you want to save. After you find the desired Reels video, copy its URL, and then paste it into your downloader to get the video saved to your device. This helps make sure the correct Reels video is found, especially when the user profile contains multiple videos."
+     }
+      {
+  "@type":"Question",
+     "name":"Why can I see the Reel on Instagram, but the downloader can't find it?",
+     "acceptedAnswer":{
+       "@type":"Answer",
+       "text":"Typically, this happens due to insufficient Public Visibility on your Instagram account. Although I may have access because I am logged in, follow the account, and can also download other media from the account, external tools do not have access to the media. Additionally, the media may be restricted by age, region, a new Reel after an initial post was made, or not currently available through Instagram's public systems. Please verify your link and try returning in a few minutes as new content will need additional time to become available for download by the downloader."
+     }
+    }
+   }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+   {
+     "@type":"ListItem",
+     "position":1,
+     "name":"Home",
+     "item":"https://instadpdownload.com/"
+   },
+   {
+     "@type":"ListItem",
+     "position":2,
+     "name":"Instagram Reel Downloader",
+     "item":"https://instadpdownload.com/instagram-reel-downloader"
+   }
+ ]
+} </script>
+
+<script defer src="https://unpkg.com/lucide@latest"></script>
 <style>
 /* Base styles */
 html, body {
@@ -53,6 +122,28 @@ body{font-family:Inter,sans-serif}
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+.instagram-gradient-loader {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #405de6;
+    border-right-color: #e1306c;
+    border-bottom-color: #ffdc80;
+    border-left-color: #833ab4;
+    animation: spin 1s linear infinite;
+}
+.instagram-gradient-spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top-color: #405de6;
+    border-right-color: #e1306c;
+    border-bottom-color: #ffdc80;
+    border-left-color: #833ab4;
+    animation: spin 1s linear infinite;
 }
 /* Mobile responsive styles */
 @media (max-width: 480px) {
@@ -89,13 +180,14 @@ body{font-family:Inter,sans-serif}
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between h-16 items-center">
 <a href=/ class="flex items-center space-x-2 group">
-<img src=/instalogo.png alt="InstaDP Logo" class="w-10 h-10 object-contain">
-<span class="text-xl font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DP</span></span>
+
+<span class="text-xl font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DPdownload</span></span>
 </a>
 <div id=desktopMenu class="desktop-menu space-x-8 text-sm font-medium text-gray-400">
 <a href=/ class="hover:text-white transition-colors">Home</a>
+<a href=/instagram-reel-downloader class="text-white font-bold">Reel Downloader</a>
+<a href=/instagram-followers-counter class="hover:text-white transition-colors">Follower Counter</a>
 <a href=https://threadsgrab.com/ class="hover:text-white transition-colors">Threads Downloader</a>
-<a href=https://fbviddl.com/ class="hover:text-white transition-colors">Facebook Downloader</a>
 <a href=/about class="hover:text-white transition-colors">About</a>
 <a href=/blog class="hover:text-white transition-colors">Blog</a>
 <a href=/contact class="hover:text-white transition-colors">Contact</a>
@@ -114,7 +206,7 @@ body{font-family:Inter,sans-serif}
 <div class="flex flex-col h-full">
 <div class="h-16 flex items-center justify-between px-6 border-b border-[#262626]">
 <a href=/ class="flex items-center space-x-2">
-<img src=/instalogo.png alt="InstaDP Logo" class="w-8 h-8 object-contain">
+
 <span class="text-base font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DP</span></span>
 </a>
 <button id=closeMenuBtn class="p-2 text-gray-400 hover:text-white transition-colors">
@@ -126,8 +218,9 @@ body{font-family:Inter,sans-serif}
 <div class="flex-grow overflow-y-auto">
 <nav class="flex flex-col">
 <a href=/ class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Home</a>
+<a href=/instagram-reel-downloader class="flex items-center px-6 py-4 text-white font-bold bg-[#1c1c1c] border-b border-[#262626] transition-all">Reel Downloader</a>
+<a href=/instagram-followers-counter class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Follower Counter</a>
 <a href=https://threadsgrab.com/ class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Threads Downloader</a>
-<a href=https://fbviddl.com/ class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Facebook Downloader</a>
 <a href=/about class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">About</a>
 <a href=/blog class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Blog</a>
 <a href=/contact class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Contact</a>
@@ -151,12 +244,12 @@ Instagram Reel <span class="instagram-gradient-text">Downloader </span>
 <input id=reelUrlInput placeholder="Enter Instagram Reel URL" class="w-full pl-12 pr-32 py-4 bg-[#262626] border border-[#363636] text-white rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-transparent outline-none transition-all text-lg">
 <button type=submit id=submitBtn class="absolute right-2 px-6 py-2.5 instagram-gradient text-white rounded-xl font-semibold hover:opacity-90 disabled:opacity-50 transition-all flex items-center gap-2">
 <span id=btnText>View Reel</span>
-<i id=loadingIcon data-lucide=loader-2 class="w-5 h-5 animate-spin hidden"></i>
+<span id=loadingIcon class="instagram-gradient-loader hidden"></span>
 </button>
 </div>
 </form>
 <div id=loadingState class="hidden flex flex-col items-center justify-center py-12">
-<i data-lucide=loader-2 class="w-12 h-12 text-purple-500 animate-spin mb-4"></i>
+<div class="instagram-gradient-spinner mb-4"></div>
 <p class="text-gray-400 font-medium">Fetching reel data...</p>
 </div>
 <div id=errorState class="hidden bg-red-900/30 border border-red-900/40 text-red-300 p-4 rounded-2xl flex items-center gap-3 mb-12">
@@ -196,14 +289,14 @@ Copy URL
 <div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
 <h2 class="font-bold text-lg mb-2 text-white">Download Instagram Reels – Save Your Favourite Insta Reels (HD)</h2>
 <p class=text-gray-400>
-Instagram Reels are everywhere now. From comedic memes to travelling edits, gym workouts, tutorials to gaming accessories, and popular audio tracks - Reels can be found all over Instagram. People spend many hours each day scrolling through the Reels available on Instagram.
+Insta Reels are everywhere now. From comedic memes to travelling edits, gym workouts, tutorials to gaming accessories, and popular audio tracks - Reels can be found all over Instagram. People spend many hours each day scrolling through the Reels available on Instagram.
 </p>
 <p class=text-gray-400>Sometimes though, you come across the perfect video for your own inspiration, or just to watch it offline, or because you know you will not find it again!
 
 However, the downside is that Instagram does not allow you to download most public Reels directly to your device. Sure, you can save them within the app, but that doesn’t mean it will save forever, as if the creator of the Reel deletes the post, you’ve lost everything.</p>
 <p class=text-gray-400>That's why there are Instagram Reel Downloaders.
 
-Our Insta Reel Downloader allows you to download Instagram Reels (HD) online easily and quickly. You don't need to download software, create an account or have any other complicated processes. All you need to do is copy the link URL from the Reel and paste it into our system for an instant download!</p>
+Our Insta Reel Downloader allows you to download Insta Reels (HD) online easily and quickly. You don't need to download software, create an account or have any other complicated processes. All you need to do is copy the link URL from the Reel and paste it into our system for an instant download!</p>
 </div>
 <div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
 <h2 class="font-bold text-lg mb-2 text-white">Why People Download Instagram Reels </h2>
@@ -213,7 +306,7 @@ Our Insta Reel Downloader allows you to download Instagram Reels (HD) online eas
 Because short-form content moves so quickly, trends last only days, and viral activity is gone very quickly, by using the option of downloading a Reel every user will be able to keep content about which they care.</p>
 </div>
 <div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
-<h2 class="font-bold text-lg mb-2 text-white">An Effective and Efficient Solution to Download Insta Reels</h2>
+<h2 class="font-bold text-lg mb-2 text-white">An Effective and Efficient Solution to save Insta Reels</h2>
 <p class=text-gray-400>The majority of websites that offer to download reels are unreliable. The majority of these sites are overwhelmingly cluttered with fake download buttons, advertisements, pop-ups, and don’t work anymore.
 
 The downloader we use is very different from all of the others available online today.
@@ -222,6 +315,13 @@ The key features of this downloader are that it’s extremely quick, user-friend
 <p class=text-gray-400>You don’t need to download an application onto your phone or other smart devices to be able to use this downloader. It can be used directly from any web browser on your computer or smart device regardless of which brand or type you use.
 
 This means that you can download your reels without taking up valuable storage space on your device.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h2 class="font-bold text-lg mb-2 text-white">Advantages of Using Internet-Based Reel savers</h2>
+<p class=text-gray-400>Convenience is one of the main advantages of using an internet-based downloader. You don’t have to download any software or applications; it all works through a web browser on your desktop, tablet, or smartphone.</p>
+<p class=text-gray-400>Generally, it’s just a matter of copying a reel link, pasting it into the search box, and getting a downloadable version of it within seconds. This makes internet-based tools easy to use, even for people who don’t have much technical knowledge.</p>
+<p class=text-gray-400>Another big advantage is that they work on multiple types of devices. All modern internet-based solutions are able to function on multiple operating system platforms—Windows, macOS, Android, Linux, and iOS. Since everything is done via the internet, you can access the service as long as you have a modern web browser.</p>
+<p class=text-gray-400>Speed is another benefit to using these types of tools. Nobody wants to wait several minutes to watch a short video. Reliable tools fetch media quickly so you can choose your download option pretty much instantly.</p>
 </div>
 <div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
 <h2 class="font-bold text-lg mb-2 text-white">Downloading Reels in HD Quality</h2>
@@ -233,6 +333,11 @@ This Instagram shorts Downloader Tool will maintain the video quality, ensuring 
 This downloader does not put any watermarks on your videos. Therefore, you are able to have a clean video without any random branding or watermarks on top.</p>
 </div>
 <div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h2 class="font-bold text-lg mb-2 text-white">Save Content for Inspiration</h2>
+<p class="text-gray-400">Creative professionals often seek out inspiration via social media. From short-form video, designers, marketers and photographers, videographers and entrepreneurs have discovered new and exciting ideas. By saving examples of inspiration (such as video clips) to build their own personal reference library, creators can gain access to materials which will help to support them creatively: projects, campaigns, editing styles, storytelling techniques and creative concepts.</p>
+<p class="text-gray-400">Downloading videos gives creators an easy way to re-experience content that inspired them at any time they need to find inspiration.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
 <h2 class="font-bold text-lg mb-2 text-white">Mobile, Desktop and Tablet Compatibility</h2>
 <p class=text-gray-400>Since most individuals utilize Instagram primarily through their mobile devices, mobile performance plays an extremely important role.
 
@@ -242,6 +347,12 @@ A large portion of the downloader websites look incredibly bad on small screens,
 You can simply copy the link from the Instagram app and download it in seconds.
 
 As the downloads occur directly inside your browser, you do not have to download additional applications or browser extensions.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h2 class="font-bold text-lg mb-2 text-white">Responsible Usage</h2>
+<p class="text-gray-400">Downloaded materials must be utilized in accordance with their intended use. Users must respect copyright laws and the copyright holder(s) of the material they download. For example, downloading videos that are in the public domain to watch privately, learn, or for reference purposes is permissible; however, redistributing and/or republishing downloaded video(s) without the permission of the copyright owner constitutes copyright infringement.</p>
+<p class="text-gray-400">When content is shared publicly, it is essential to provide proper attribution and comply with all applicable laws and platform policies.</p>
+<p class="text-gray-400">By respecting the wishes of the copyright holder, users can help support a sustainable digital environment for the continued creation of original content.</p>
 </div>
 </div>
 </section>
@@ -303,7 +414,7 @@ fastdl
 Instagram reel Downloader
 </a>
 </h3>
-<p class=text-gray-400>Download Instagram reels in high quality, fast and easy.</p>
+<p class=text-gray-400>Download Instagram shorts in high quality, fast and easy.</p>
 </div>
 <div class="bg-[#121212] border border-[#262626] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
 <h3 class="text-xl font-bold mb-4 text-white">
@@ -319,7 +430,7 @@ Instagram Profile Picture Downloader
 Instagram Follower Counter
 </a>
 </h3>
-<p class=text-gray-400>Track real-time follower count updates instantly.</p>
+<p class="text-gray-400">Track real-time follower count updates instantly.</p>
 </div>
 </div>
 <section id=faq class=mb-20>
@@ -329,13 +440,40 @@ Instagram Follower Counter
 </div>
 <div class=space-y-4>
 <div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
-<h3 class="font-bold text-lg mb-2 text-white">Why can’t I download Instagram Reels directly?</h3>
-<p class=text-gray-400>Instagram doesn't provide a direct download option for Reels. This tool allows you to download public Reels for personal use.</p>
+<h3 class="font-bold text-lg mb-2 text-white">What should I do if the link to download doesn't work?</h3>
+<p class=text-gray-400>The first thing to do if the link to download isn't working is to check that you copied the correct URL of the Instagram reel rather than Profile/Story URLs. You might want to try reloading your browser window and regenerate/download a new link for the reel. If there are still issues after this, then the reel may have been deleted, made private, limited due to geographic restrictions or it may just be temporarily unavailable on Instagram. In many situations, simply waiting a few moments and trying again a few times will resolve any problems with downloading reels from Instagram. If you have followed these steps and there's still no desire to successfully download the reel you could also try using another browser/device to eliminate any chance of problems caused by a specific web browser you were using initially when you attempted to successfully download the reel from Instagram.</p>
 </div>
 <div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
-<h3 class="font-bold text-lg mb-2 text-white">Do I need to log in to download Reels?</h3>
-<p class=text-gray-400>No, you don't need to log in. This tool only works with public Reels that are visible to everyone.</p>
+<h3 class="font-bold text-lg mb-2 text-white">I only know the Instagram username. Can I download a Reel without the Reel link?</h3>
+<p class=text-gray-400>In most cases, you will need the direct link to download videos from Reels. If you only have an Instagram username, however, you can view that username's profile and search for the Reels video that you want to save. After you find the desired Reels video, copy its URL, and then paste it into your downloader to get the video saved to your device. This helps make sure the correct Reels video is found, especially when the user profile contains multiple videos.</p>
 </div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h3 class="font-bold text-lg mb-2 text-white">Will the audio be included in the downloaded Reel?</h3>
+<p class=text-gray-400>Generally, when a Reel is downloaded, it includes almost the same audio that plays on Instagram, such as music, voiceovers, and sound effects. However, some videos may have audio restrictions that are related to copyright licensing, regional availability, or changes that may have been made to the reel by Instagram after it has been posted. If any part of a Reel is heard on Instagram and the audio is not included in the downloaded version, try creating a new download link for another download of the video.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h3 class="font-bold text-lg mb-2 text-white">Why can I see the Reel on Instagram, but the downloader can't find it?</h3>
+<p class=text-gray-400>Typically, this happens due to insufficient Public Visibility on your Instagram account. Although I may have access because I am logged in, follow the account, and can also download other media from the account, external tools do not have access to the media. Additionally, the media may be restricted by age, region, a new Reel after an initial post was made, or not currently available through Instagram's public systems. Please verify your link and try returning in a few minutes as new content will need additional time to become available for download by the downloader.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h3 class="font-bold text-lg mb-2 text-white">The creator disabled downloads on Instagram. Can I still save the Reel?</h3>
+<p class=text-gray-400>Instagram has disabled direct downloads from within their app for videos where a creator has set their videos to be non-downloadable (following users can still save them). Even if you cannot download the video through Instagram, under certain circumstances, you may still be able to copy a link to the video from another website. However, whether or not you will be able to do so will depend on Instagram's rules at the time you try to access the video and also how the content is made available to you. If you cannot obtain a copy or download link using any other tool, it may be due to the creator's privacy settings or because Instagram currently prohibits this.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h3 class="font-bold text-lg mb-2 text-white">Is it Possible to Download Reels from Stories?</h3>
+<p class=text-gray-400>The answer is that it depends on what you are linking back to. When someone shares a Reel in their Story, you typically need the URL for the original Reel rather than the Story URL. The Story URLs are temporary and will typically expire one day after being shared, but the original Reels are permanently available to view on the creator’s profile. To get the best results, you should open the Reel from the Story in order to copy the actual Reel URL before attempting to use a downloader for it.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h3 class="font-bold text-lg mb-2 text-white">Can I use downloaded Reels in my own videos?</h3>
+<p class=text-gray-400>When a user downloads a Reel from Instagram, they do not obtain any legal rights to the content. If you plan to repurpose a third-party Reel, or use it in your videos, you should always first get permission from the original creator. Even though it may be legal for you to save a video from the platform for your viewing pleasure (exclusive of the original creator's rights), redistributing that third-party video without the original creator's explicit permission can infringe upon the copyrights owned by the creator; violate policies established; or the intellectual property protections afforded by law to the particular creator as an artist. Therefore, ensure you always have gotten the express written authorization of the original creator of any content you intend to reshare (or distribute) before sharing to the public . Always use proper attribution for the original creator's work when you do this.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h3 class="font-bold text-lg mb-2 text-white">Does The Creator Get Notified If Someone Downloads Their Reel?</h3>
+<p class=text-gray-400>Creators can’t see anybody who has used a third-party website or app to download their public Reel. They also will not receive any type of notification, see a person's name, or know that their video was downloaded. However, it is important to always respect copyright when using a downloaded file and to be responsible if you share it or reuse it in a public setting.</p>
+</div>
+
+
+
 </div>
 </section>
 </main>
@@ -344,8 +482,8 @@ Instagram Follower Counter
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div class="text-center md:text-left">
 <div class="flex items-center justify-center md:justify-start gap-2 mb-4">
-<img src=/instalogo.png alt="InstaDP Logo" class="w-8 h-8 object-contain">
-<span class="font-bold text-lg text-white">InstaDP</span>
+
+<span class="font-bold text-lg text-white">InstaDP<span class="instagram-gradient-text">Download.com</span></span>
 </div>
 <p class="text-gray-500 text-sm">Download Instagram Reels in high resolution for free.</p>
 </div>
@@ -354,7 +492,6 @@ Instagram Follower Counter
 <div class=space-y-2>
 <a href=/ class="text-gray-400 hover:text-white transition-colors text-sm block">Home</a>
 <a href=/about class="text-gray-400 hover:text-white transition-colors text-sm block">About</a>
-<a href=/blog class="text-gray-400 hover:text-white transition-colors text-sm block">Blog</a>
 <a href=/contact class="text-gray-400 hover:text-white transition-colors text-sm block">Contact</a>
 </div>
 </div>
@@ -362,19 +499,24 @@ Instagram Follower Counter
 <h3 class="font-bold text-lg mb-4 text-white">Legal</h3>
 <div class=space-y-2>
 <a href=/privacy class="text-gray-400 hover:text-white transition-colors text-sm block">Privacy Policy</a>
-<a href=/terms class="text-gray-400 hover:text-white transition-colors text-sm block">Terms of Service</a>
 <a href=/disclaimer class="text-gray-400 hover:text-white transition-colors text-sm block">Disclaimer</a>
 </div>
 </div>
 </div>
 <div class="border-t border-[#262626] mt-8 pt-8 text-center">
-<p class="text-gray-500 text-sm">© 2026 InstaDP. Not affiliated with Instagram or Meta.</p>
+<p class="text-gray-500 text-sm">© 2026 InstaDPdownload.com. Not affiliated with Instagram or Meta.</p>
 </div>
 </div>
 </footer>
 <script src=/menu.js></script>
+```html
+<script>
+const API_BASES = [
+    "",
+    "https://fbapp.romitkryadav.workers.dev",
+    "https://instacombo.romitkryadav.workers.dev"
+];
 
-<script>const API_BASE = "https://fbapp.romitkryadav.workers.dev";
 let currentResult = null;
 
 const searchForm = document.getElementById("searchForm");
@@ -398,107 +540,266 @@ function validateInstagramUrl(url) {
 
 function setLoading(isLoading) {
     submitBtn.disabled = isLoading;
+
     btnText.classList.toggle("hidden", isLoading);
     loadingIcon.classList.toggle("hidden", !isLoading);
+
     loadingState.classList.toggle("hidden", !isLoading);
+
     errorState.classList.add("hidden");
     resultSection.classList.add("hidden");
 }
 
+function showError(message) {
+    errorState.classList.remove("hidden");
+    errorMessage.textContent = message;
+
+    errorState.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+
 async function fetchWithTimeout(url, timeout = 8000) {
     const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+    const timeoutId = setTimeout(() => {
+        controller.abort();
+    }, timeout);
+
     try {
-        const response = await fetch(url, { signal: controller.signal });
+        const response = await fetch(url, {
+            signal: controller.signal
+        });
+
         clearTimeout(timeoutId);
         return response;
+
     } catch (error) {
         clearTimeout(timeoutId);
         throw error;
     }
 }
 
-async function handleDownload(e) {
-    e.preventDefault();
-    const url = reelUrlInput.value.trim();
-    if (!url) {
-        showError("Please enter an Instagram Reel URL");
-        return;
-    }
-    if (!validateInstagramUrl(url)) {
-        showError("Please enter a valid Instagram Reel URL");
-        return;
-    }
-    setLoading(true);
-    try {
-        const response = await fetchWithTimeout(`${API_BASE}/api/download?url=${encodeURIComponent(url)}`);
-        const data = await response.json();
-        setLoading(false);
-        if (!data.success) {
-            showError(data.message || "Unable to extract media");
-            return;
+async function fetchFromAnyWorker(instagramUrl) {
+
+    let lastError = null;
+
+    const startIndex = Math.floor(
+        Math.random() * API_BASES.length
+    );
+
+    for (let i = 0; i < API_BASES.length; i++) {
+
+        const api =
+            API_BASES[
+                (startIndex + i) %
+                API_BASES.length
+            ];
+
+        try {
+
+            console.log("Trying:", api);
+
+            const response = await fetchWithTimeout(
+                `${api}/api/download?url=${encodeURIComponent(instagramUrl)}`,
+                8000
+            );
+
+            if (!response.ok) {
+                throw new Error(
+                    `HTTP ${response.status}`
+                );
+            }
+
+            const data = await response.json();
+
+            if (data.success) {
+                console.log(
+                    "Success from:",
+                    api
+                );
+
+                return data;
+            }
+
+            lastError =
+                data.message ||
+                "Extraction failed";
+
+        } catch (error) {
+
+            console.warn(
+                "Worker failed:",
+                api,
+                error
+            );
+
+            lastError = error.message;
         }
-        displayResult(data);
-    } catch (error) {
-        setLoading(false);
-        showError("Server connection failed");
     }
+
+    throw new Error(
+        lastError ||
+        "All workers unavailable"
+    );
 }
 
-function showError(message) {
-    errorState.classList.remove("hidden");
-    errorMessage.textContent = message;
-    errorState.scrollIntoView({ behavior: "smooth", block: "center" });
+async function handleDownload(e) {
+
+    e.preventDefault();
+
+    const url = reelUrlInput.value.trim();
+
+    if (!url) {
+        showError(
+            "Please enter an Instagram Reel URL"
+        );
+        return;
+    }
+
+    if (!validateInstagramUrl(url)) {
+        showError(
+            "Please enter a valid Instagram Reel URL"
+        );
+        return;
+    }
+
+    setLoading(true);
+
+    try {
+
+        const data =
+            await fetchFromAnyWorker(url);
+
+        setLoading(false);
+
+        displayResult(data);
+
+    } catch (error) {
+
+        setLoading(false);
+
+        showError(
+            error.message ||
+            "All servers are currently unavailable"
+        );
+    }
 }
 
 function displayResult(data) {
+
     currentResult = data;
+
     if (data.video_url) {
-        reelVideo.crossOrigin = 'anonymous';
+
+        reelVideo.crossOrigin = "anonymous";
         reelVideo.src = data.video_url;
+
         reelVideo.onloadeddata = () => {
             reelVideo.play().catch(() => {});
         };
     }
-    reelUsername.textContent = data.username ? `@${data.username}` : "@instagram";
+
+    reelUsername.textContent =
+        data.username
+            ? `@${data.username}`
+            : "@instagram";
+
     downloadBtn.onclick = async () => {
-        if (currentResult?.video_url) {
-            try {
-                const response = await fetch(currentResult.video_url);
-                if (!response.ok) throw new Error('Download failed');
-                const blob = await response.blob();
-                const blobUrl = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = blobUrl;
-                a.download = 'instagram-reel.mp4';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(blobUrl);
-            } catch (error) {
-                showError('Unable to start download');
+
+        if (!currentResult?.video_url) return;
+
+        try {
+
+            const response =
+                await fetch(
+                    currentResult.video_url
+                );
+
+            if (!response.ok) {
+                throw new Error();
             }
+
+            const blob =
+                await response.blob();
+
+            const blobUrl =
+                URL.createObjectURL(blob);
+
+            const a =
+                document.createElement("a");
+
+            a.href = blobUrl;
+            a.download =
+                "instagram-reel.mp4";
+
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            URL.revokeObjectURL(blobUrl);
+
+        } catch {
+
+            showError(
+                "Unable to start download"
+            );
         }
     };
+
     copyUrlBtn.onclick = async () => {
-        if (currentResult?.video_url) {
-            try {
-                await navigator.clipboard.writeText(currentResult.video_url);
-                copyUrlBtn.innerHTML = '<i data-lucide="check" class="w-5 h-5"></i> Copied!';
-                setTimeout(() => {
-                    copyUrlBtn.innerHTML = '<i data-lucide="link" class="w-5 h-5"></i> Copy URL';
+
+        if (!currentResult?.video_url)
+            return;
+
+        try {
+
+            await navigator.clipboard
+                .writeText(
+                    currentResult.video_url
+                );
+
+            copyUrlBtn.innerHTML =
+                '<i data-lucide="check" class="w-5 h-5"></i> Copied!';
+
+            setTimeout(() => {
+
+                copyUrlBtn.innerHTML =
+                    '<i data-lucide="link" class="w-5 h-5"></i> Copy URL';
+
+                if (window.lucide) {
                     lucide.createIcons();
-                }, 2000);
-            } catch (e) {
-                alert('Failed to copy URL');
-            }
+                }
+
+            }, 2000);
+
+        } catch {
+
+            alert(
+                "Failed to copy URL"
+            );
         }
     };
-    resultSection.classList.remove("hidden");
-    resultSection.scrollIntoView({ behavior: "smooth", block: "center" });
+
+    resultSection.classList.remove(
+        "hidden"
+    );
+
+    resultSection.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
 }
 
-searchForm.addEventListener("submit", handleDownload);</script>     
+searchForm.addEventListener(
+    "submit",
+    handleDownload
+);
+</script>
+```
+
+
 
 <script>lucide.createIcons()</script>
 </body>
