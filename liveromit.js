@@ -15,23 +15,45 @@ const WORKERS = [
 ];
 
 const POPULAR_PROFILES = [
-  { name: "Instagram", username: "instagram", avatarUrl: "https://instagram.com/instagram/profile_pic", count: 673410000 },
-  { name: "Cristiano Ronaldo", username: "cristiano", avatarUrl: "https://instagram.com/cristiano/profile_pic", count: 665200000 },
-  { name: "Lionel Messi", username: "leomessi", avatarUrl: "https://instagram.com/leomessi/profile_pic", count: 504100000 },
-  { name: "Selena Gomez", username: "selenagomez", avatarUrl: "https://instagram.com/selenagomez/profile_pic", count: 429300000 },
-  { name: "Kylie Jenner", username: "kyliejenner", avatarUrl: "https://instagram.com/kyliejenner/profile_pic", count: 401500000 },
-  { name: "Dwayne Johnson", username: "therock", avatarUrl: "https://instagram.com/therock/profile_pic", count: 395800000 }
+  { name: "Instagram", username: "instagram", avatarUrl: "https://instadpdownload.com/assets/dpimg/instagram.jpg", count: 685781245 },
+  { name: "Cristiano Ronaldo", username: "cristiano", avatarUrl: "https://instadpdownload.com/assets/dpimg/cristiano.jpg", count: 665192897 },
+  { name: "Lionel Messi", username: "leomessi", avatarUrl: "https://instadpdownload.com/assets/dpimg/leomessi.jpg", count: 506322419 },
+  { name: "Selena Gomez", username: "selenagomez", avatarUrl: "https://instadpdownload.com/assets/dpimg/selenagomez.jpg", count: 414402957 },
+  { name: "Kylie Jenner", username: "kyliejenner", avatarUrl: "https://instadpdownload.com/assets/dpimg/kyliejenner.jpg", count: 382739403 },
+  { name: "Dwayne Johnson", username: "therock", avatarUrl: "https://instadpdownload.com/assets/dpimg/therock.jpg", count: 382754364 }
 ];
 
 const TRENDING_ACCOUNTS = [
-  { username: "beyonce", display: "Beyoncé" },
-  { username: "kimkardashian", display: "Kim Kardashian" },
+  { username: "cockroachjantaparty", display: "Cockroach Janta Party" },
+  { username: "mrbeast", display: "MrBeast" },
+  { username: "virat.kohli", display: "Virat Kohli" },
   { username: "kyliejenner", display: "Kylie Jenner" },
   { username: "therock", display: "Dwayne Johnson" },
   { username: "zachking", display: "Zach King" },
   { username: "cristiano", display: "Cristiano Ronaldo" },
   { username: "selenagomez", display: "Selena Gomez" },
   { username: "leomessi", display: "Lionel Messi" }
+];
+
+const PROMOTIONAL_ACCOUNTS = [
+  {
+    username: "romitkryadav",
+    display: "Romit kr Yadav",
+    description: "Hi, I'm Romit. I'm interested in technology, web projects, and online business. My goal is to build valuable digital products, develop strong technical skills, and create a successful career in tech.",
+    avatarUrl: "https://instadpdownload.com/assets/dpimg/romitkryadav.jpg"
+  },
+  {
+    username: "abhijit_yadav_0018",
+    display: "Abhijit Kumar",
+    description: "Just a simple guy who loves exploring new places, enjoying nature, and capturing beautiful moments through photography.",
+    avatarUrl: "https://instadpdownload.com/assets/dpimg/abhijit_yadav_0018.jpg"
+  },
+  {
+    username: "itz.vikash.kumar.02",
+    display: "Vikash Kumar",
+    description: "Proud Indian 🇮🇳 | Family is my greatest treasure ❤️ | Music keeps me going 🎶 | Living life by my own rules 😎 | Grateful, ambitious, and always moving forward ✨ | 🎂 29 March.",
+    avatarUrl: "https://instadpdownload.com/assets/dpimg/itz.vikash.kumar.02.jpg"
+  }
 ];
 
 // App State
@@ -92,6 +114,7 @@ const previewBtn = document.getElementById("previewBtn");
 // Panels list mapping
 const popularGrid = document.getElementById("popularGrid");
 const trendingGrid = document.getElementById("trendingGrid");
+const promoGrid = document.getElementById("promoGrid");
 const historySection = document.getElementById("historySection");
 const historyTagsContainer = document.getElementById("historyTagsContainer");
 const clearHistoryBtn = document.getElementById("clearHistoryBtn");
@@ -1000,6 +1023,51 @@ function renderTrendingGrid() {
   });
 }
 
+function renderPromotionalGrid() {
+  if (!promoGrid) return;
+  promoGrid.innerHTML = "";
+
+  PROMOTIONAL_ACCOUNTS.forEach(account => {
+    const btn = document.createElement("button");
+    btn.className = `rounded-3xl border p-4 text-left transition-all min-h-[130px] w-full ${
+      currentUsername === account.username
+        ? "bg-rose-500/10 border-rose-500 text-white"
+        : "bg-zinc-900/40 border-zinc-800 hover:border-zinc-700 hover:bg-zinc-900/80 text-zinc-300 hover:text-zinc-100"
+    }`;
+
+    btn.innerHTML = `
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-full bg-zinc-950 overflow-hidden flex items-center justify-center border border-zinc-800">
+          <img src="${account.avatarUrl}" alt="${account.display}" class="w-full h-full object-cover" />
+        </div>
+        <div class="text-left">
+          <div class="text-sm font-semibold">${account.display}</div>
+          <div class="text-[10px] text-zinc-500">@${account.username}</div>
+        </div>
+      </div>
+      <p class="text-[10px] text-zinc-400 leading-snug">${account.description}</p>
+    `;
+
+    btn.addEventListener("click", () => {
+      currentUsername = account.username;
+      const cachedRecord = searchHistory.find(h => h.username === account.username);
+      currentFollowerCount = cachedRecord?.lastCount || null;
+      currentAvatarUrl = cachedRecord?.avatarUrl || account.avatarUrl;
+      currentFullName = cachedRecord?.fullName || account.display;
+      currentBiography = cachedRecord?.biography || "Real-time Instagram statistics tracker.";
+      sessionsTracked = [{ time: "INIT", count: 0 }];
+
+      syncUIElements(true);
+      trackInstagramProfile(currentUsername, false);
+      renderPopularSelectGrid();
+      renderTrendingGrid();
+      renderPromotionalGrid();
+    });
+
+    promoGrid.appendChild(btn);
+  });
+}
+
 // ----------------------------------------------------
 // Visual Asset Actions handling (Download, preview)
 // ----------------------------------------------------
@@ -1040,6 +1108,7 @@ function initApp() {
   loadLocalHistory();
   renderPopularSelectGrid();
   renderTrendingGrid();
+  renderPromotionalGrid();
   
   // Track default "instagram" profile on boot
   sessionsTracked = [{ time: "INIT", count: 0 }];

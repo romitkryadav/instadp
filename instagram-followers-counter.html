@@ -68,13 +68,14 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16 items-center">
         <a href="/" class="flex items-center space-x-2 group">
-          <img src="/instalogo.png" alt="InstaDP Logo" class="w-10 h-10 object-contain">
-          <span class="text-xl font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DP</span></span>
+          
+          <span class="text-xl font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DPdownload</span></span>
         </a>
         <div id="desktopMenu" class="desktop-menu space-x-8 text-sm font-medium text-gray-400">
           <a href="/" class="hover:text-white transition-colors">Home</a>
+          <a href="/instagram-reel-downloader" class="hover:text-white transition-colors">Reel Downloader</a>
+          <a href="/instagram-followers-counter" class="text-white font-bold">Follower Counter</a>
           <a href="https://threadsgrab.com/" class="hover:text-white transition-colors">Threads Downloader</a>
-          <a href="https://fbviddl.com/" class="hover:text-white transition-colors">Facebook Downloader</a>
           <a href="/about" class="hover:text-white transition-colors">About</a>
           <a href="/blog" class="hover:text-white transition-colors">Blog</a>
           <a href="/contact" class="hover:text-white transition-colors">Contact</a>
@@ -93,8 +94,8 @@
       <div class="flex flex-col h-full">
         <div class="h-16 flex items-center justify-between px-6 border-b border-[#262626]">
           <a href="/" class="flex items-center space-x-2">
-            <img src="/instalogo.png" alt="InstaDP Logo" class="w-8 h-8 object-contain">
-            <span class="text-base font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DP</span></span>
+            
+            <span class="text-base font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DPdownload</span></span>
           </a>
           <button id="closeMenuBtn" class="p-2 text-gray-400 hover:text-white transition-colors">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -105,8 +106,9 @@
         <div class="flex-grow overflow-y-auto">
           <nav class="flex flex-col">
             <a href="/" class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Home</a>
+            <a href="/instagram-reel-downloader" class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Reel Downloader</a>
+            <a href="/instagram-followers-counter" class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Follower Counter</a>
             <a href="https://threadsgrab.com/" class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Threads Downloader</a>
-            <a href="https://fbviddl.com/" class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Facebook Downloader</a>
             <a href="/about" class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">About</a>
             <a href="/blog" class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Blog</a>
             <a href="/contact" class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Contact</a>
@@ -405,7 +407,22 @@
           <!-- Trending usernames rendered by script -->
         </div>
       </div>
-    </div>
+
+      <!-- Promotional Accounts showcase -->
+      <div id="promoSection" class="bg-zinc-950/45 border border-zinc-900/80 rounded-2xl p-6 mt-8">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-sm font-bold text-white uppercase tracking-wider font-display flex items-center gap-2">
+            <svg class="h-4 w-4 text-rose-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 3a9 9 0 100 18 9 9 0 000-18z" />
+            </svg>
+            Promotional Accounts
+          </h3>
+          <span class="text-[10px] text-zinc-500 font-mono">Featured accounts for brand updates</span>
+        </div>
+        <div id="promoGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <!-- Promotional profiles rendered by script -->
+        </div>
+      </div>
 
     <!-- Persistent Browser Search History Logs list -->
     <div id="historySection" class="hidden bg-zinc-950/45 border border-zinc-900/80 rounded-2xl p-5">
@@ -437,10 +454,10 @@
           <svg class="h-4 w-4 text-rose-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <h4 class="text-xs uppercase font-bold tracking-wider font-display font-semibold">Instastatistics Dynamic API</h4>
+          <h4 class="text-xs uppercase font-bold tracking-wider font-display font-semibold">Third-Party API Integration</h4>
         </div>
         <p class="text-xs text-zinc-400 leading-relaxed">
-          We leverage direct authentication tokens and the official Instastatistics API to reconstruct 100% accurate real-time count states without caching or parsing lag.
+         We use reliable third-party APIs to fetch and display real-time statistics with high accuracy. Data is updated dynamically to provide the latest available counts while minimizing delays and ensuring a smooth user experience.
         </p>
       </div>
 
@@ -449,10 +466,10 @@
           <svg class="h-4 w-4 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <h4 class="text-xs uppercase font-bold tracking-wider font-display font-semibold font-semibold">Tethered Updates</h4>
+          <h4 class="text-xs uppercase font-bold tracking-wider font-display font-semibold font-semibold">Fast Data Refresh</h4>
         </div>
         <p class="text-xs text-zinc-400 leading-relaxed">
-          Maintains an active 5.0 second polling sweep. When Instagram changes count states on Instastatistics, you see it instantly.
+         Our system refreshes statistics at regular intervals to ensure you receive the latest available data from our third-party API providers with minimal delay.
         </p>
       </div>
 
@@ -461,23 +478,48 @@
           <svg class="h-4 w-4 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
           </svg>
-          <h4 class="text-xs uppercase font-bold tracking-wider font-display font-semibold font-semibold">Decelerating Roll</h4>
+          <h4 class="text-xs uppercase font-bold tracking-wider font-display font-semibold font-semibold">Seamless Visual Updates</h4>
         </div>
         <p class="text-xs text-zinc-400 leading-relaxed">
-          Our high-fidelity ease-out interpolator simulates dynamic slot machine reels when counts move, without performance jitter.
+        Our interface uses optimized animations to present changing statistics naturally and smoothly, ensuring a responsive experience without sacrificing performance.
         </p>
       </div>
     </div>
 
-  </main>
+  
+<section class=mb-20>
+<div class="space-y-6 mt-8 pt-8 border-t border-[#262626]">
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h2 class="font-bold text-lg mb-2 text-white">Real-Time Instagram Follower Count Changes</h2>
+<p class=text-gray-400>
+Instagram can change quickly. A viral Instagram Reel can generate large amounts of new followers in minutes, while cooperating with someone else or having a post that is trending will allow you to reach new people in your audience. In order to accurately track your growth on Instagram, checking your profile occasionally won't be sufficient enough.
+</p>
+<p class=text-gray-400>With our Instagram Follower Counter, you can see real-time follower counts and the changes in the number of followers that occur. Type in any public username on Instagram to see the current number of people who follow that username without having to reuse the Instagram app to access this same information again and again. Whether you are tracking your own follower growth for future content creation or studying a competitor's follower count to improve your marketing strategy, being able to quickly look at the number of followers will help you understand what changes are happening to your follower base.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h2 class="font-bold text-lg mb-2 text-white">The Importance of Following in the Future of Marketing</h2>
+<p class=text-gray-400>A lot of social media experts believe that engagement is more important than having followers, which is partially true. But, in the long-run, followers are still one of the best ways to measure growth and visibility for both brands and audiences.</p>
+<p class=text-gray-400>When accounts consistently gain followers, that’s usually a sign that their content is resonating with more people. Growth is often indicative of an effective strategy for creating content, retaining an audience, and obtaining more visibility via Instagram's recommendation engine.</p>
+<p class=text-gray-400>To businesses, an increasing number of followers means more awareness and preference for their brand. To creators, the number of followers indicates whether their audience is enjoying their content. To marketers, follower trends will provide insight into how well their campaigns are performing and what they can do to improve their efforts.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h2 class="font-bold text-lg mb-2 text-white">A Helpful Tool for Creators and Businesses</h2>
+<p class=text-gray-400>For creators wanting to grow their audience, it may seem like a long struggle. There are times when the number of followers you have changes so little that you don't see any increase in your number of followers, and then there are also times when your number of followers may increase dramatically overnight.</p>
+<p class=text-gray-400>Having access to a follower counter allows you to track and monitor the changes to your number of followers without having to refresh Instagram every few moments.</p>
+<p class=text-gray-400>
+Businesses also have different uses for a follower tracking system as compared to creators. They may want to see if a marketing campaign is working to drive traffic toward an individual product, or they may just want to know if they have attracted more followers after launching a new product, and using a follower tracking solution will help them to know if they are gaining more followers after a marketing campaign.</p>
+<p class=text-gray-400>Social media managers and agencies can also utilize a follower tracking service to measure how well each of their clients' accounts are performing. Rather than having to check each account individually, they can check all the various accounts at the same time so they can see how each of them is performing relative to all of the other accounts.</p>
 
+
+
+</main>
   <!-- InstaDP Footer -->
   <footer class="bg-black border-t border-[#262626] py-12">
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="text-center md:text-left">
           <div class="flex items-center justify-center md:justify-start gap-2 mb-4">
-            <img src="/instalogo.png" alt="InstaDP Logo" class="w-8 h-8 object-contain">
+            
             <span class="font-bold text-lg text-white">InstaDP</span>
           </div>
           <p class="text-gray-500 text-sm">Download Instagram profile pictures in high resolution for free.</p>
