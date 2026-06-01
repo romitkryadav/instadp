@@ -28,36 +28,20 @@
 <link rel=stylesheet href=/romitstyle.css>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel=stylesheet>
 <script src=https://unpkg.com/lucide@latest></script>
-<style>
-body{font-family:Inter,sans-serif}
-.scroll-mt-20{scroll-margin-top:5rem}
-@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-.animate-spin{animation:spin 1s linear infinite}
-.hidden{display:none}
-/* Instagram theme colors */
-.instagram-gradient {
-    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f77737, #fcaf45, #ffdc80);
-}
-.instagram-gradient-text {
-    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f77737, #fcaf45, #ffdc80);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-</style>
+<style>body{font-family:Inter,sans-serif}.scroll-mt-20{scroll-margin-top:5rem}@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}.animate-spin{animation:spin 1s linear infinite}.hidden{display:none}.instagram-gradient{background:linear-gradient(45deg,#405de6,#5851db,#833ab4,#c13584,#e1306c,#fd1d1d,#f77737,#fcaf45,#ffdc80)}.instagram-gradient-text{background:linear-gradient(45deg,#405de6,#5851db,#833ab4,#c13584,#e1306c,#fd1d1d,#f77737,#fcaf45,#ffdc80);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}</style>
 </head>
 <body class="min-h-screen bg-black text-white selection:bg-blue-500/30">
 <nav class="bg-black border-b border-[#262626] sticky top-0 z-50">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between h-16 items-center">
 <a href=/ class="flex items-center space-x-2 group">
-<img src=/instalogo.png alt="InstaDP Logo" class="w-10 h-10 object-contain">
-<span class="text-xl font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DP</span></span>
+<span class="text-xl font-bold text-white tracking-tight">Insta<span class=instagram-gradient-text>DP</span></span>
 </a>
 <div id=desktopMenu class="desktop-menu space-x-8 text-sm font-medium text-gray-400">
 <a href=/ class="hover:text-white transition-colors">Home</a>
+<a href=/instagram-reel-downloader.html class="hover:text-white transition-colors">Reel Downloader</a>
+<a href=/instagram-followers-counter.html class="hover:text-white transition-colors">Follower Counter</a>
 <a href=https://threadsgrab.com/ class="hover:text-white transition-colors">Threads Downloader</a>
-<a href=https://fbviddl.com/ class="hover:text-white transition-colors">Facebook Downloader</a>
 <a href=/about class="hover:text-white transition-colors">About</a>
 <a href=/blog class="text-white font-bold">Blog</a>
 <a href=/contact class="hover:text-white transition-colors">Contact</a>
@@ -76,8 +60,7 @@ body{font-family:Inter,sans-serif}
 <div class="flex flex-col h-full">
 <div class="h-16 flex items-center justify-between px-6 border-b border-[#262626]">
 <a href=/ class="flex items-center space-x-2">
-<img src=/instalogo.png alt="InstaDP Logo" class="w-8 h-8 object-contain">
-<span class="text-base font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DP</span></span>
+<span class="text-base font-bold text-white tracking-tight">Insta<span class=instagram-gradient-text>DP</span></span>
 </a>
 <button id=closeMenuBtn class="p-2 text-gray-400 hover:text-white transition-colors">
 <svg class="w-6 h-6" fill=none stroke=currentColor viewBox="0 0 24 24">
@@ -90,11 +73,14 @@ body{font-family:Inter,sans-serif}
 <a href=/ class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
 Home
 </a>
+<a href=/instagram-reel-downloader.html class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
+Reel Downloader
+</a>
+<a href=/instagram-followers-counter.html class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
+Follower Counter
+</a>
 <a href=https://threadsgrab.com/ class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
 Threads Downloader
-</a>
-<a href=https://fbviddl.com/ class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
-Facebook Downloader
 </a>
 <a href=/about class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
 About
@@ -113,25 +99,25 @@ Contact
 <main class="max-w-4xl mx-auto px-4 py-12 sm:py-20">
 <div class="text-center mb-12">
 <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 tracking-tight">
-<span class="instagram-gradient-text">Blog</span>
+<span class=instagram-gradient-text>Blog</span>
 </h1>
 <p class="text-lg text-gray-400 max-w-2xl mx-auto">
 Tips, tricks, and insights about Instagram profile pictures
 </p>
 </div>
-<div class="space-y-8">
+<div class=space-y-8>
 <article class="bg-[#121212] rounded-3xl shadow-sm border border-[#262626] p-8 hover:shadow-md transition-shadow">
 <div class="flex items-center gap-3 mb-4">
 <span class="bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold">Tips</span>
 <span class="text-gray-500 text-sm">May 21, 2026</span>
 </div>
 <h2 class="text-2xl font-bold mb-3 hover:text-blue-400 transition-colors">
-<a href="/blog/how-to-download-instagram-profile-picture">How to Download Instagram Profile Picture in High Quality</a>
+<a href=/blog/how-to-download-instagram-profile-picture>How to Download Instagram Profile Picture in High Quality</a>
 </h2>
 <p class="text-gray-400 mb-4 leading-relaxed">
 Step-by-step guide on how to download Instagram profile pictures in high quality. Learn the easy way to save Instagram DPs.
 </p>
-<a href="/blog/how-to-download-instagram-profile-picture" class="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all">
+<a href=/blog/how-to-download-instagram-profile-picture class="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all">
 Read more
 <i data-lucide=arrow-right class="w-4 h-4"></i>
 </a>
@@ -142,12 +128,12 @@ Read more
 <span class="text-gray-500 text-sm">May 10, 2026</span>
 </div>
 <h2 class="text-2xl font-bold mb-3 hover:text-blue-400 transition-colors">
-<a href="#">Why Instagram Profile Pictures Appear Blurry</a>
+<a href=#>Why Instagram Profile Pictures Appear Blurry</a>
 </h2>
 <p class="text-gray-400 mb-4 leading-relaxed">
 Discover the reasons why Instagram compresses profile pictures and how you can view them in their original quality.
 </p>
-<a href="#" class="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all">
+<a href=# class="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all">
 Read more
 <i data-lucide=arrow-right class="w-4 h-4"></i>
 </a>
@@ -158,12 +144,12 @@ Read more
 <span class="text-gray-500 text-sm">May 5, 2026</span>
 </div>
 <h2 class="text-2xl font-bold mb-3 hover:text-blue-400 transition-colors">
-<a href="#">5 Tips for Choosing the Perfect Instagram Profile Picture</a>
+<a href=#>5 Tips for Choosing the Perfect Instagram Profile Picture</a>
 </h2>
 <p class="text-gray-400 mb-4 leading-relaxed">
 Make your Instagram profile stand out with these expert tips for choosing and optimizing your profile picture.
 </p>
-<a href="#" class="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all">
+<a href=# class="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all">
 Read more
 <i data-lucide=arrow-right class="w-4 h-4"></i>
 </a>
@@ -174,12 +160,12 @@ Read more
 <span class="text-gray-500 text-sm">April 28, 2026</span>
 </div>
 <h2 class="text-2xl font-bold mb-3 hover:text-blue-400 transition-colors">
-<a href="#">Can You View Private Instagram Profile Pictures?</a>
+<a href=#>Can You View Private Instagram Profile Pictures?</a>
 </h2>
 <p class="text-gray-400 mb-4 leading-relaxed">
 Everything you need to know about viewing and downloading profile pictures from private Instagram accounts.
 </p>
-<a href="#" class="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all">
+<a href=# class="inline-flex items-center gap-2 text-blue-400 font-semibold hover:gap-3 transition-all">
 Read more
 <i data-lucide=arrow-right class="w-4 h-4"></i>
 </a>
@@ -191,7 +177,6 @@ Read more
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div class="text-center md:text-left">
 <div class="flex items-center justify-center md:justify-start gap-2 mb-4">
-<img src=/instalogo.png alt="InstaDP Logo" class="w-8 h-8 object-contain">
 <span class="font-bold text-lg text-white">InstaDP</span>
 </div>
 <p class="text-gray-500 text-sm">

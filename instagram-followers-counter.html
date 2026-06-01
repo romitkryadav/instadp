@@ -1,492 +1,387 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang=en>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instagram Followers Counter - InstaDP</title>
-  <meta name="description" content="Real-time Instagram followers counter - InstaDP">
-  <meta name="author" content="InstaDP">
-  <link rel="canonical" href="https://instadpdownload.com/instagram-followers-counter">
-  <link rel="icon" type="image/png" href="/instalogo.png">
-  
-  <!-- Font pairings: Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Custom Style Sheet -->
-  <link rel="stylesheet" href="/romitstylelive.css">
-  <link rel="stylesheet" href="/romit2live.css">
-  <link rel="stylesheet" href="/romitstyle.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <style>
-    /* Instagram theme colors */
-    .instagram-gradient {
-        background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f77737, #fcaf45, #ffdc80);
+<meta charset=UTF-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Instagram Followers Counter - Track Instagram Followers in Real-Time</title>
+<meta name=description content="Real-time Instagram followers counter by InstaDPdownload. Track any public profile's follower count live with our dynamic tool.">
+<meta name="keywords" content="instagram followers counter, live instagram counter, instagram tracker">
+<meta name=author content=InstaDPdownload>
+<meta property=og:title content="Instagram Followers Counter - Track Instagram Followers in Real-Time">
+<meta property=og:description content="Real-time Instagram followers counter by InstaDPdownload. Track any public profile's follower count live with our dynamic tool.">
+<meta property=og:image content=https://instadpdownload.com/instalogo.png>
+<meta property=og:url content=https://instadpdownload.com/instagram-followers-counter>
+<meta property=og:type content=website>
+<meta name=twitter:card content=summary_large_image>
+<meta name=twitter:title content="Instagram Followers Counter - Track Instagram Followers in Real-Time">
+<meta name=twitter:description content="Real-time Instagram followers counter by InstaDPdownload. Track any public profile's follower count live with our dynamic tool.">
+<meta name=twitter:image content=https://instadpdownload.com/instalogo.png>
+<meta name=robots content="index, follow">
+<link rel=canonical href=https://instadpdownload.com/instagram-followers-counter>
+<link rel=icon type=image/png href=/instalogo.png>
+<link rel=preconnect href=https://fonts.googleapis.com>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel=stylesheet>
+<link rel=stylesheet href=/romitstylelive.css>
+<link rel=stylesheet href=/romit2live.css>
+<link rel=stylesheet href=/romitstyle.css>
+<script defer src=https://unpkg.com/lucide@latest></script>
+<style>.instagram-gradient{background:linear-gradient(45deg,#405de6,#5851db,#833ab4,#c13584,#e1306c,#fd1d1d,#f77737,#fcaf45,#ffdc80)}.instagram-gradient-text{background:linear-gradient(45deg,#405de6,#5851db,#833ab4,#c13584,#e1306c,#fd1d1d,#f77737,#fcaf45,#ffdc80);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.instadp-nav{background-color:#000!important;border-bottom:1px solid #262626!important}.instadp-nav .desktop-menu a{color:#a1a1aa!important}.instadp-nav .desktop-menu a:hover{color:#fff!important}.instadp-nav .mobile-menu-panel{background-color:#000!important;border-left:1px solid #262626!important;box-shadow:-10px 0 30px rgba(0,0,0,.5)!important}.instadp-nav .mobile-menu-link{color:#a1a1aa!important;border-bottom:1px solid #262626!important}.instadp-nav .mobile-menu-link:hover{background-color:#1c1c1c!important;color:#fff!important}</style>
+
+<script type=application/ld+json>
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"Is it possible to view someone else’s follower count on Instagram?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes, public Instagram follower counts can be viewed using the tool."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Can I Check Private Instagram Accounts?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No, private account information cannot be accessed."
+      }
     }
-    .instagram-gradient-text {
-        background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f77737, #fcaf45, #ffdc80);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+  ]
+}
+</script>
+<script type=application/ld+json>
+{
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Instagram Followers Counter",
+      "operatingSystem": "Web",
+      "applicationCategory": "UtilitiesApplication",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "27959"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
     }
-    
-    /* Ensure nav menu uses dark theme */
-    .instadp-nav {
-        background-color: #000000 !important;
-        border-bottom: 1px solid #262626 !important;
-    }
-    .instadp-nav .desktop-menu a {
-        color: #a1a1aa !important;
-    }
-    .instadp-nav .desktop-menu a:hover {
-        color: #ffffff !important;
-    }
-    .instadp-nav .mobile-menu-panel {
-        background-color: #000000 !important;
-        border-left: 1px solid #262626 !important;
-        box-shadow: -10px 0 30px rgba(0,0,0,0.5) !important;
-    }
-    .instadp-nav .mobile-menu-link {
-        color: #a1a1aa !important;
-        border-bottom: 1px solid #262626 !important;
-    }
-    .instadp-nav .mobile-menu-link:hover {
-        background-color: #1c1c1c !important;
-        color: #ffffff !important;
-    }
-  </style>
+</script>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"Organization",
+ "name":"InstaDPdownload",
+ "url":"https://instadpdownload.com",
+ "logo":"https://instadpdownload.com/instalogo.png"
+}
+</script>
 </head>
 <body class="bg-black text-zinc-100 min-h-screen flex flex-col font-sans relative overflow-x-hidden selection:bg-rose-500 selection:text-white">
-
-  <!-- Atmospheric gradients & grid backdrop -->
-  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-gradient-to-b from-rose-900/15 via-transparent to-transparent blur-3xl pointer-events-none -z-10 atmosphere-backdrop"></div>
-  <div class="absolute inset-0 bg-[radial-gradient(#1f1f23_1px,transparent_1px)] [background-size:16px_16px] opacity-40 pointer-events-none -z-10"></div>
-
-  <!-- InstaDP Navigation -->
-  <nav class="instadp-nav bg-black border-b border-[#262626] sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16 items-center">
-        <a href="/" class="flex items-center space-x-2 group">
-          
-          <span class="text-xl font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DPdownload</span></span>
-        </a>
-        <div id="desktopMenu" class="desktop-menu space-x-8 text-sm font-medium text-gray-400">
-          <a href="/" class="hover:text-white transition-colors">Home</a>
-          <a href="/instagram-reel-downloader" class="hover:text-white transition-colors">Reel Downloader</a>
-          <a href="/instagram-followers-counter" class="text-white font-bold">Follower Counter</a>
-          <a href="https://threadsgrab.com/" class="hover:text-white transition-colors">Threads Downloader</a>
-          <a href="/about" class="hover:text-white transition-colors">About</a>
-          <a href="/blog" class="hover:text-white transition-colors">Blog</a>
-          <a href="/contact" class="hover:text-white transition-colors">Contact</a>
-        </div>
-        <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-400 hover:text-white transition-colors">
-          <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-          <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div id="mobileMenu" class="mobile-menu-panel md:hidden fixed top-0 right-0 bottom-0 w-72 max-w-[80%] bg-black border-l border-[#262626] z-40 transform transition-transform duration-300 ease-in-out translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.5)]">
-      <div class="flex flex-col h-full">
-        <div class="h-16 flex items-center justify-between px-6 border-b border-[#262626]">
-          <a href="/" class="flex items-center space-x-2">
-            
-            <span class="text-base font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DPdownload</span></span>
-          </a>
-          <button id="closeMenuBtn" class="p-2 text-gray-400 hover:text-white transition-colors">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-        <div class="flex-grow overflow-y-auto">
-          <nav class="flex flex-col">
-            <a href="/" class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Home</a>
-            <a href="/instagram-reel-downloader" class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Reel Downloader</a>
-            <a href="/instagram-followers-counter" class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Follower Counter</a>
-            <a href="https://threadsgrab.com/" class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Threads Downloader</a>
-            <a href="/about" class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">About</a>
-            <a href="/blog" class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Blog</a>
-            <a href="/contact" class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Contact</a>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-
-
-  <!-- Core Content Main Frame -->
-  <main class="flex-1 max-w-4xl w-full mx-auto px-4 py-8 flex flex-col gap-8 justify-center">
-    
-    <!-- Unified Container Card Stage -->
-    <section id="trackerCard" class="w-full bg-zinc-950/80 border border-zinc-800/80 rounded-2xl p-6 md:p-8 shadow-2xl relative">
-      
-      <!-- Top header lookups search formulation -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pb-6 border-b border-zinc-800/60 items-center justify-between relative z-10">
-        <h2 class="text-lg font-bold text-white font-display flex items-center gap-2">
-          <!-- Dynamic Speed wave SVG -->
-          <svg class="h-5 w-5 text-[#ff2975]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
-          Instant Search Profile
-        </h2>
-
-        <!-- Action Search input form -->
-        <form id="searchForm" class="relative w-full flex gap-2">
-          <div class="relative flex-1">
-            <span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-500 font-mono text-sm select-none">@</span>
-            <input
-              id="usernameInput"
-              type="text"
-              placeholder="enter.instagram.profile"
-              autocomplete="off"
-              spellcheck="false"
-              class="w-full bg-zinc-900 border border-zinc-800 focus:border-rose-500 text-white rounded-xl pl-8 pr-4 py-2.5 text-sm focus:outline-none transition-all placeholder-zinc-600 font-mono"
-              required
-            />
-          </div>
-          <button
-            id="submitBtn"
-            type="submit"
-            class="bg-gradient-to-r from-[#ff2975] to-[#7f37c9] hover:brightness-110 active:scale-95 text-white font-medium text-xs md:text-sm px-4 md:px-5 py-2.5 rounded-xl transition-all flex items-center justify-center gap-1.5 font-display min-w-[90px]"
-          >
-            <span id="btnText">Track</span>
-            <svg id="loadingIcon" class="hidden animate-spin h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-            </svg>
-          </button>
-        </form>
-      </div>
-
-      <!-- Live Loading Shimmer status tracker -->
-      <div id="loadingState" class="hidden absolute top-4 right-4 flex items-center gap-1.5 text-xs text-rose-400 bg-rose-500/15 border border-rose-500/20 px-2.5 py-1 rounded-full animate-pulse font-mono z-20">
-        <!-- Spinner -->
-        <svg class="animate-spin h-3 w-3 text-rose-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-        </svg>
-        <span>refreshing</span>
-      </div>
-
-      <!-- Connection / Parsing Error Card -->
-      <div id="errorState" class="hidden my-8 max-w-lg mx-auto bg-rose-950/20 border border-rose-500/30 rounded-xl p-5 text-center flex flex-col items-center gap-3 relative z-10">
-        <div class="h-10 w-10 rounded-full bg-rose-500/15 text-rose-500 flex items-center justify-center">
-          <!-- Alert triangle SVG -->
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        </div>
-        <div>
-          <h3 class="text-rose-400 font-semibold text-sm font-display">Parsing Error Alert</h3>
-          <p id="errorMessage" class="text-zinc-400 text-xs mt-1 leading-relaxed font-mono">Could not retrieve live count.</p>
-        </div>
-        <button id="errorRetryBtn" class="bg-rose-500/10 hover:bg-rose-500/20 text-rose-300 border border-rose-500/30 text-xs font-mono px-3.5 py-1.5 rounded-lg transition-all">
-          Force Retry Connection
-        </button>
-      </div>
-
-      <!-- Core Counter Presentation Stage -->
-      <div id="counterStage" class="py-10 flex flex-col items-center justify-center text-center relative">
-        
-        <!-- Profile Picture Canvas -->
-        <div class="mb-6 relative group inline-block">
-          <div class="absolute inset-0 bg-gradient-to-tr from-[#fbc531] via-[#e84118] to-[#9c88ff] rounded-full blur opacity-40 group-hover:opacity-75 transition-opacity"></div>
-          <div class="relative p-1 bg-gradient-to-tr from-[#fbc531] via-[#e84118] to-[#9c88ff] rounded-full w-24 h-24 sm:w-28 sm:h-28 shadow-xl">
-            <img
-              id="profileImg"
-              src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=150&h=150&fit=crop&q=80"
-              alt="Profile avatar"
-              referrerpolicy="no-referrer"
-              class="w-full h-full rounded-full object-cover bg-zinc-950 border-2 border-zinc-950"
-            />
-          </div>
-          <!-- Live floating badge indicator -->
-          <span class="absolute bottom-1 right-1 bg-emerald-500 text-black text-[9px] font-bold font-mono px-1.5 py-0.5 rounded-full border border-black uppercase flex items-center gap-1 shadow-lg shadow-black/40">
-            <span class="w-1.5 h-1.5 bg-black rounded-full animate-ping"></span>
-            live
-          </span>
-        </div>
-
-        <!-- Target Username indicator -->
-        <div class="mb-4">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-sm font-semibold tracking-wide text-zinc-100 hover:border-zinc-700 transition-colors">
-            <span class="w-2.5 h-2.5 rounded-full bg-[#ff2975] animate-ping"></span>
-            <span class="text-zinc-400 font-normal">tracking</span>
-            <span id="trackerUsername" class="text-white font-mono">@instagram</span>
-            <a
-              id="igLink"
-              href="https://instagram.com/instagram"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-zinc-500 hover:text-white transition-colors ml-1"
-              title="Open official Instagram window"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-75"><line x1="7" x2="17" y1="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Profile details card (Biographies & names extracted from workers) -->
-        <div id="authorDetailsCard" class="mb-5 max-w-sm mx-auto text-center px-4">
-          <h2 id="resFullName" class="text-lg font-bold text-white tracking-tight leading-snug">Instagram</h2>
-          <p id="resBio" class="text-zinc-400 text-xs mt-1 leading-relaxed italic line-clamp-3 overflow-hidden text-ellipsis">The official page of Instagram</p>
-        </div>
-
-        <!-- Massive follower metrics with retro neon styles -->
-        <div class="relative py-4 select-none w-full">
-          <div id="massiveCounter" class="text-6xl md:text-8xl font-black font-mono tracking-tight text-white transition-all transform hover:scale-[1.01] glow-digit">
-            100,000,000
-          </div>
-          <!-- Grid glowing overlay reflections -->
-          <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-20 -z-10 bg-[#ff2975]/10 filter blur-xl rounded-full opacity-60"></div>
-        </div>
-
-        <!-- Header Label -->
-        <div class="text-sm font-semibold text-zinc-400 uppercase tracking-widest font-display mb-8">
-          INSTAGRAM FOLLOWERS
-        </div>
-
-        <!-- Circular countdown indicator and pause/play button sync -->
-        <div class="flex items-center gap-4 bg-zinc-900/60 border border-zinc-800/50 px-5 py-3 rounded-xl min-w-[280px]">
-          <div class="relative h-6 w-6 flex items-center justify-center">
-            <!-- Progress Circle SVG -->
-            <svg class="w-full h-full transform -rotate-90">
-              <circle
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="#27272a"
-                stroke-width="2.5"
-                fill="transparent"
-              />
-              <circle
-                id="countdownCircle"
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="url(#instaGradientCircle)"
-                stroke-width="2.5"
-                fill="transparent"
-                stroke-dasharray="62.8"
-                stroke-dashoffset="0"
-                class="transition-all duration-100 ease-linear"
-              />
-            </svg>
-            <svg class="absolute w-0 h-0">
-              <defs>
-                <linearGradient id="instaGradientCircle" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#f7a53c" />
-                  <stop offset="50%" stop-color="#ff2975" />
-                  <stop offset="100%" stop-color="#7f37c9" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </div>
-
-          <div class="text-left font-mono text-xs flex-1">
-            <div class="text-zinc-300 font-semibold flex items-center justify-between">
-              <span>Live monitoring</span>
-              <span id="countdownLabel" class="text-rose-400">5.0s</span>
-            </div>
-            <p id="monitoringSub" class="text-[10px] text-zinc-500 mt-0.5">Fetching from Instastatistics servers</p>
-          </div>
-
-          <!-- Play / Pause Action Button -->
-          <div class="flex items-center gap-1.5 border-l border-zinc-805 pl-3">
-            <button id="toggleTimerBtn" class="p-1.5 rounded-md bg-amber-500/15 text-amber-400 hover:bg-amber-500/20 transition-all font-display" title="Pause or Resume dynamic polling">
-              <div id="playPauseIconShape" class="h-3 w-3 flex gap-0.5 items-center justify-center">
-                <span class="w-0.5 h-2 bg-amber-400" />
-                <span class="w-0.5 h-2 bg-amber-400" />
-              </div>
-            </button>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Standalone Session Logs & Sparklines Panel -->
-      <div id="metricsPanel" class="border-t border-zinc-800/80 pt-6 mt-4 relative z-10">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          
-          <div class="bg-zinc-900/40 border border-zinc-900 rounded-xl p-3 text-center">
-            <div class="text-[11px] text-zinc-500 uppercase font-bold tracking-wider mb-1 font-display">Target Username</div>
-            <span id="statTargetUser" class="text-sm font-mono text-white font-semibold">@instagram</span>
-          </div>
-
-          <div class="bg-zinc-900/40 border border-zinc-900 rounded-xl p-3 text-center">
-            <div class="text-[11px] text-zinc-500 uppercase font-bold tracking-wider mb-1 font-display">Session Delta</div>
-            <div id="statDelta" class="text-sm font-mono font-semibold text-emerald-400 flex items-center justify-center gap-1">
-              +0
-            </div>
-          </div>
-
-          <div class="bg-zinc-900/40 border border-zinc-900 rounded-xl p-3 text-center">
-            <div class="text-[11px] text-zinc-500 uppercase font-bold tracking-wider mb-1 font-display">Poll Iterations</div>
-            <span id="statIterations" class="text-sm font-mono text-white font-semibold">1 ticks</span>
-          </div>
-
-          <div class="bg-zinc-900/40 border border-zinc-900 rounded-xl p-3 text-center">
-            <div class="text-[11px] text-zinc-500 uppercase font-bold tracking-wider mb-1 font-display">Last verified</div>
-            <span id="statTime" class="text-sm font-mono text-white font-semibold">Live</span>
-          </div>
-        </div>
-
-        <!-- Live Sparkline Graphic Area Panel -->
-        <div class="mt-5 p-4 bg-zinc-950 border border-zinc-900 rounded-xl">
-          <div class="flex items-center justify-between mb-3 text-xs">
-            <div class="flex items-center gap-1.5 text-zinc-400 font-display">
-              <!-- Grid line SVG -->
-              <svg class="h-4 w-4 text-[#ff2975]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M7 12l3-3 3 3 4-4M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-              <span>In-Session Follower Trend Sparkline</span>
-            </div>
-            <span class="text-[10px] text-zinc-500 font-mono">Live updates accumulate history below</span>
-          </div>
-          
-          <!-- Sparkline Container with auto responsiveness -->
-          <div id="sparklineSvgContainer" class="w-full h-24">
-            <!-- Programmatically injected SVG sparklines here -->
-          </div>
-        </div>
-        
-        <!-- HD Download & Full Preview Panels matching visual actions -->
-        <div class="grid grid-cols-2 gap-3 max-w-xs mx-auto mt-6">
-          <button id="downloadBtn" class="flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-zinc-950 hover:bg-zinc-90 w-full text-zinc-200 text-xs font-semibold border border-zinc-800 hover:border-zinc-700 hover:text-white transition-all">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-            Download HD
-          </button>
-          
-          <button id="previewBtn" class="flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-zinc-950 hover:bg-zinc-90 w-full text-zinc-200 text-xs font-semibold border border-zinc-800 hover:border-zinc-700 hover:text-white transition-all">
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0z"/><circle cx="12" cy="12" r="3"/></svg>
-            Preview DP
-          </button>
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- Popular Profiles Quick selectors -->
-    <div id="popularSection" class="bg-zinc-950/45 border border-zinc-900/80 rounded-2xl p-6">
-      <div class="flex items-center justify-between mb-4">
-        <h3 class="text-sm font-bold text-white uppercase tracking-wider font-display flex items-center gap-2">
-          <!-- Flame icon SVG -->
-          <svg class="h-4 w-4 text-amber-500" xmlns="http://www.w3.org/2005/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-          Popular Live Accounts
-        </h3>
-        <span class="text-[10px] text-zinc-500 font-mono">click to switch track target</span>
-      </div>
-
-      <!-- Quick select grids (loaded with the 6 profiles) -->
-      <div id="popularGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-        <!-- Programmatically dynamically generated popular nodes match React exactly -->
-      </div>
-
-      <!-- Trending accounts list for fast username selection -->
-      <div class="mt-8">
-        <div class="flex items-center justify-between mb-4">
-          <h3 class="text-sm font-bold text-white uppercase tracking-wider font-display flex items-center gap-2">
-            <svg class="h-4 w-4 text-sky-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c1.657 0 3 1.343 3 3v7h-6v-7c0-1.657 1.343-3 3-3z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 20h14" />
-            </svg>
-            Trending Accounts
-          </h3>
-          <span class="text-[10px] text-zinc-500 font-mono">tap to track a trending username</span>
-        </div>
-
-        <div id="trendingGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-          <!-- Trending usernames rendered by script -->
-        </div>
-      </div>
-
-      <!-- Promotional Accounts showcase -->
-      <div id="promoSection" class="bg-zinc-950/45 border border-zinc-900/80 rounded-2xl p-6 mt-8">
-        <div class="flex items-center justify-between mb-4">
-          <h3 class="text-sm font-bold text-white uppercase tracking-wider font-display flex items-center gap-2">
-            <svg class="h-4 w-4 text-rose-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 3a9 9 0 100 18 9 9 0 000-18z" />
-            </svg>
-            Promotional Accounts
-          </h3>
-          <span class="text-[10px] text-zinc-500 font-mono">Featured accounts for brand updates</span>
-        </div>
-        <div id="promoGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          <!-- Promotional profiles rendered by script -->
-        </div>
-      </div>
-
-    <!-- Persistent Browser Search History Logs list -->
-    <div id="historySection" class="hidden bg-zinc-950/45 border border-zinc-900/80 rounded-2xl p-5">
-      <div class="flex items-center justify-between mb-3.5">
-        <div class="flex items-center gap-2">
-          <!-- History SVG icon -->
-          <svg class="h-4 w-4 text-zinc-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <h3 class="text-xs font-semibold text-zinc-300 uppercase tracking-widest font-display">
-            Recent Tracks logs
-          </h3>
-        </div>
-        <button id="clearHistoryBtn" class="text-[10px] text-zinc-500 hover:text-rose-400 transition-colors font-mono">
-          Clear Cache logs
-        </button>
-      </div>
-
-      <!-- Flex items of logs indicators -->
-      <div id="historyTagsContainer" class="flex flex-wrap gap-2.5">
-        <!-- Dynamically populated from localStorage -->
-      </div>
-    </div>
-
-    <!-- Bento Highlights descriptions list identical to main React app -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="bg-zinc-950/30 border border-zinc-900 p-4 rounded-xl">
-        <div class="flex items-center gap-2 mb-2 text-white">
-          <svg class="h-4 w-4 text-rose-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <h4 class="text-xs uppercase font-bold tracking-wider font-display font-semibold">Third-Party API Integration</h4>
-        </div>
-        <p class="text-xs text-zinc-400 leading-relaxed">
-         We use reliable third-party APIs to fetch and display real-time statistics with high accuracy. Data is updated dynamically to provide the latest available counts while minimizing delays and ensuring a smooth user experience.
-        </p>
-      </div>
-
-      <div class="bg-zinc-950/30 border border-zinc-900 p-4 rounded-xl">
-        <div class="flex items-center gap-2 mb-2 text-white">
-          <svg class="h-4 w-4 text-pink-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <h4 class="text-xs uppercase font-bold tracking-wider font-display font-semibold font-semibold">Fast Data Refresh</h4>
-        </div>
-        <p class="text-xs text-zinc-400 leading-relaxed">
-         Our system refreshes statistics at regular intervals to ensure you receive the latest available data from our third-party API providers with minimal delay.
-        </p>
-      </div>
-
-      <div class="bg-zinc-950/30 border border-zinc-900 p-4 rounded-xl">
-        <div class="flex items-center gap-2 mb-2 text-white">
-          <svg class="h-4 w-4 text-amber-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-          </svg>
-          <h4 class="text-xs uppercase font-bold tracking-wider font-display font-semibold font-semibold">Seamless Visual Updates</h4>
-        </div>
-        <p class="text-xs text-zinc-400 leading-relaxed">
-        Our interface uses optimized animations to present changing statistics naturally and smoothly, ensuring a responsive experience without sacrificing performance.
-        </p>
-      </div>
-    </div>
-
-  
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-gradient-to-b from-rose-900/15 via-transparent to-transparent blur-3xl pointer-events-none -z-10 atmosphere-backdrop"></div>
+<div class="absolute inset-0 bg-[radial-gradient(#1f1f23_1px,transparent_1px)] [background-size:16px_16px] opacity-40 pointer-events-none -z-10"></div>
+<nav class="instadp-nav bg-black border-b border-[#262626] sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16 items-center">
+<a href=/ class="flex items-center space-x-2 group">
+<span class="text-xl font-bold text-white tracking-tight">Insta<span class=instagram-gradient-text>DPdownload</span></span>
+</a>
+<div id=desktopMenu class="desktop-menu space-x-8 text-sm font-medium text-gray-400">
+<a href=/ class="hover:text-white transition-colors">Home</a>
+<a href=/instagram-reel-downloader class="hover:text-white transition-colors">Reel Downloader</a>
+<a href=/instagram-followers-counter class="text-white font-bold">Follower Counter</a>
+<a href=https://threadsgrab.com/ class="hover:text-white transition-colors">Threads Downloader</a>
+<a href=/about class="hover:text-white transition-colors">About</a>
+<a href=/blog class="hover:text-white transition-colors">Blog</a>
+<a href=/contact class="hover:text-white transition-colors">Contact</a>
+</div>
+<button id=mobileMenuBtn class="md:hidden p-2 text-gray-400 hover:text-white transition-colors">
+<svg id=menuIcon class="w-6 h-6" fill=none stroke=currentColor viewBox="0 0 24 24">
+<path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>
+<svg id=closeIcon class="w-6 h-6 hidden" fill=none stroke=currentColor viewBox="0 0 24 24">
+<path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M6 18L18 6M6 6l12 12"></path>
+</svg>
+</button>
+</div>
+</div>
+<div id=mobileMenu class="mobile-menu-panel md:hidden fixed top-0 right-0 bottom-0 w-72 max-w-[80%] bg-black border-l border-[#262626] z-40 transform transition-transform duration-300 ease-in-out translate-x-full shadow-[-10px_0_30px_rgba(0,0,0,0.5)]">
+<div class="flex flex-col h-full">
+<div class="h-16 flex items-center justify-between px-6 border-b border-[#262626]">
+<a href=/ class="flex items-center space-x-2">
+<span class="text-base font-bold text-white tracking-tight">Insta<span class=instagram-gradient-text>DPdownload</span></span>
+</a>
+<button id=closeMenuBtn class="p-2 text-gray-400 hover:text-white transition-colors">
+<svg class="w-6 h-6" fill=none stroke=currentColor viewBox="0 0 24 24">
+<path stroke-linecap=round stroke-linejoin=round stroke-width=2 d="M6 18L18 6M6 6l12 12"></path>
+</svg>
+</button>
+</div>
+<div class="flex-grow overflow-y-auto">
+<nav class="flex flex-col">
+<a href=/ class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Home</a>
+<a href=/instagram-reel-downloader class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Reel Downloader</a>
+<a href=/instagram-followers-counter class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Follower Counter</a>
+<a href=https://threadsgrab.com/ class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Threads Downloader</a>
+<a href=/about class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">About</a>
+<a href=/blog class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Blog</a>
+<a href=/contact class="mobile-menu-link flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">Contact</a>
+</nav>
+</div>
+</div>
+</div>
+</nav>
+<main class="flex-1 max-w-4xl w-full mx-auto px-4 py-8 flex flex-col gap-8 justify-center">
+<section id=trackerCard class="w-full bg-zinc-950/80 border border-zinc-800/80 rounded-2xl p-6 md:p-8 shadow-2xl relative">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 pb-6 border-b border-zinc-800/60 items-center justify-between relative z-10">
+<h2 class="text-lg font-bold text-white font-display flex items-center gap-2">
+<svg class="h-5 w-5 text-[#ff2975]" xmlns=http://www.w3.org/2000/svg fill=none viewBox="0 0 24 24" stroke=currentColor stroke-width=2>
+<path stroke-linecap=round stroke-linejoin=round d="M13 10V3L4 14h7v7l9-11h-7z"/>
+</svg>
+Instant Search Profile
+</h2>
+<form id=searchForm class="relative w-full flex gap-2">
+<div class="relative flex-1">
+<span class="absolute left-3.5 top-1/2 -translate-y-1/2 text-zinc-500 font-mono text-sm select-none">@</span>
+<input id=usernameInput placeholder=enter.instagram.profile autocomplete=off spellcheck=false class="w-full bg-zinc-900 border border-zinc-800 focus:border-rose-500 text-white rounded-xl pl-8 pr-4 py-2.5 text-sm focus:outline-none transition-all placeholder-zinc-600 font-mono" required>
+</div>
+<button id=submitBtn type=submit class="bg-gradient-to-r from-[#ff2975] to-[#7f37c9] hover:brightness-110 active:scale-95 text-white font-medium text-xs md:text-sm px-4 md:px-5 py-2.5 rounded-xl transition-all flex items-center justify-center gap-1.5 font-display min-w-[90px]">
+<span id=btnText>Track</span>
+<svg id=loadingIcon class="hidden animate-spin h-4 w-4 text-white" xmlns=http://www.w3.org/2000/svg fill=none viewBox="0 0 24 24">
+<circle class=opacity-25 cx=12 cy=12 r=10 stroke=currentColor stroke-width=4></circle>
+<path class=opacity-75 fill=currentColor d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+</svg>
+</button>
+</form>
+</div>
+<div id=loadingState class="hidden absolute top-4 right-4 flex items-center gap-1.5 text-xs text-rose-400 bg-rose-500/15 border border-rose-500/20 px-2.5 py-1 rounded-full animate-pulse font-mono z-20">
+<svg class="animate-spin h-3 w-3 text-rose-400" xmlns=http://www.w3.org/2000/svg fill=none viewBox="0 0 24 24">
+<circle class=opacity-25 cx=12 cy=12 r=10 stroke=currentColor stroke-width=4></circle>
+<path class=opacity-75 fill=currentColor d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+</svg>
+<span>refreshing</span>
+</div>
+<div id=errorState class="hidden my-8 max-w-lg mx-auto bg-rose-950/20 border border-rose-500/30 rounded-xl p-5 text-center flex flex-col items-center gap-3 relative z-10">
+<div class="h-10 w-10 rounded-full bg-rose-500/15 text-rose-500 flex items-center justify-center">
+<svg xmlns=http://www.w3.org/2000/svg width=18 height=18 viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1=12 y1=9 x2=12 y2=13 /><line x1=12 y1=17 x2=12.01 y2=17 /></svg>
+</div>
+<div>
+<h3 class="text-rose-400 font-semibold text-sm font-display">Parsing Error Alert</h3>
+<p id=errorMessage class="text-zinc-400 text-xs mt-1 leading-relaxed font-mono">Could not retrieve live count.</p>
+</div>
+<button id=errorRetryBtn class="bg-rose-500/10 hover:bg-rose-500/20 text-rose-300 border border-rose-500/30 text-xs font-mono px-3.5 py-1.5 rounded-lg transition-all">
+Force Retry Connection
+</button>
+</div>
+<div id=counterStage class="py-10 flex flex-col items-center justify-center text-center relative">
+<div class="mb-6 relative group inline-block">
+<div class="absolute inset-0 bg-gradient-to-tr from-[#fbc531] via-[#e84118] to-[#9c88ff] rounded-full blur opacity-40 group-hover:opacity-75 transition-opacity"></div>
+<div class="relative p-1 bg-gradient-to-tr from-[#fbc531] via-[#e84118] to-[#9c88ff] rounded-full w-24 h-24 sm:w-28 sm:h-28 shadow-xl">
+<img id=profileImg src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=150&h=150&fit=crop&q=80" alt="Profile avatar" referrerpolicy=no-referrer class="w-full h-full rounded-full object-cover bg-zinc-950 border-2 border-zinc-950">
+</div>
+<span class="absolute bottom-1 right-1 bg-emerald-500 text-black text-[9px] font-bold font-mono px-1.5 py-0.5 rounded-full border border-black uppercase flex items-center gap-1 shadow-lg shadow-black/40">
+<span class="w-1.5 h-1.5 bg-black rounded-full animate-ping"></span>
+live
+</span>
+</div>
+<div class=mb-4>
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 text-sm font-semibold tracking-wide text-zinc-100 hover:border-zinc-700 transition-colors">
+<span class="w-2.5 h-2.5 rounded-full bg-[#ff2975] animate-ping"></span>
+<span class="text-zinc-400 font-normal">tracking</span>
+<span id=trackerUsername class="text-white font-mono">@instagram</span>
+<a id=igLink href=https://instagram.com/instagram target=_blank rel="noopener noreferrer" class="text-zinc-500 hover:text-white transition-colors ml-1" title="Open official Instagram window">
+<svg xmlns=http://www.w3.org/2000/svg width=12 height=12 viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round stroke-linejoin=round class=opacity-75><line x1=7 x2=17 y1=17 y2=7 /><polyline points="7 7 17 7 17 17"/></svg>
+</a>
+</div>
+</div>
+<div id=authorDetailsCard class="mb-5 max-w-sm mx-auto text-center px-4">
+<h2 id=resFullName class="text-lg font-bold text-white tracking-tight leading-snug">Instagram</h2>
+<p id=resBio class="text-zinc-400 text-xs mt-1 leading-relaxed italic line-clamp-3 overflow-hidden text-ellipsis">The official page of Instagram</p>
+</div>
+<div class="relative py-4 select-none w-full">
+<div id=massiveCounter class="text-6xl md:text-8xl font-black font-mono tracking-tight text-white transition-all transform hover:scale-[1.01] glow-digit">
+100,000,000
+</div>
+<div class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-20 -z-10 bg-[#ff2975]/10 filter blur-xl rounded-full opacity-60"></div>
+</div>
+<div class="text-sm font-semibold text-zinc-400 uppercase tracking-widest font-display mb-8">
+INSTAGRAM FOLLOWERS
+</div>
+<div class="flex items-center gap-4 bg-zinc-900/60 border border-zinc-800/50 px-5 py-3 rounded-xl min-w-[280px]">
+<div class="relative h-6 w-6 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90">
+<circle cx=12 cy=12 r=10 stroke=#27272a stroke-width=2.5 fill=transparent />
+<circle id=countdownCircle cx=12 cy=12 r=10 stroke=url(#instaGradientCircle) stroke-width=2.5 fill=transparent stroke-dasharray=62.8 stroke-dashoffset=0 class="transition-all duration-100 ease-linear"/>
+</svg>
+<svg class="absolute w-0 h-0">
+<defs>
+<linearGradient id=instaGradientCircle x1=0% y1=0% x2=100% y2=100%>
+<stop offset=0% stop-color=#f7a53c />
+<stop offset=50% stop-color=#ff2975 />
+<stop offset=100% stop-color=#7f37c9 />
+</linearGradient>
+</defs>
+</svg>
+</div>
+<div class="text-left font-mono text-xs flex-1">
+<div class="text-zinc-300 font-semibold flex items-center justify-between">
+<span>Live monitoring</span>
+<span id=countdownLabel class=text-rose-400>5.0s</span>
+</div>
+<p id=monitoringSub class="text-[10px] text-zinc-500 mt-0.5">Fetching from Instastatistics servers</p>
+</div>
+<div class="flex items-center gap-1.5 border-l border-zinc-805 pl-3">
+<button id=toggleTimerBtn class="p-1.5 rounded-md bg-amber-500/15 text-amber-400 hover:bg-amber-500/20 transition-all font-display" title="Pause or Resume dynamic polling">
+<div id=playPauseIconShape class="h-3 w-3 flex gap-0.5 items-center justify-center">
+<span class="w-0.5 h-2 bg-amber-400">
+<span class="w-0.5 h-2 bg-amber-400">
+</div>
+</button>
+</div>
+</div>
+</div>
+<div id=metricsPanel class="border-t border-zinc-800/80 pt-6 mt-4 relative z-10">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-zinc-900/40 border border-zinc-900 rounded-xl p-3 text-center">
+<div class="text-[11px] text-zinc-500 uppercase font-bold tracking-wider mb-1 font-display">Target Username</div>
+<span id=statTargetUser class="text-sm font-mono text-white font-semibold">@instagram</span>
+</div>
+<div class="bg-zinc-900/40 border border-zinc-900 rounded-xl p-3 text-center">
+<div class="text-[11px] text-zinc-500 uppercase font-bold tracking-wider mb-1 font-display">Session Delta</div>
+<div id=statDelta class="text-sm font-mono font-semibold text-emerald-400 flex items-center justify-center gap-1">
++0
+</div>
+</div>
+<div class="bg-zinc-900/40 border border-zinc-900 rounded-xl p-3 text-center">
+<div class="text-[11px] text-zinc-500 uppercase font-bold tracking-wider mb-1 font-display">Poll Iterations</div>
+<span id=statIterations class="text-sm font-mono text-white font-semibold">1 ticks</span>
+</div>
+<div class="bg-zinc-900/40 border border-zinc-900 rounded-xl p-3 text-center">
+<div class="text-[11px] text-zinc-500 uppercase font-bold tracking-wider mb-1 font-display">Last verified</div>
+<span id=statTime class="text-sm font-mono text-white font-semibold">Live</span>
+</div>
+</div>
+<div class="mt-5 p-4 bg-zinc-950 border border-zinc-900 rounded-xl">
+<div class="flex items-center justify-between mb-3 text-xs">
+<div class="flex items-center gap-1.5 text-zinc-400 font-display">
+<svg class="h-4 w-4 text-[#ff2975]" xmlns=http://www.w3.org/2000/svg fill=none viewBox="0 0 24 24" stroke=currentColor stroke-width=2>
+<path stroke-linecap=round stroke-linejoin=round d="M7 12l3-3 3 3 4-4M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+</svg>
+<span>In-Session Follower Trend Sparkline</span>
+</div>
+<span class="text-[10px] text-zinc-500 font-mono">Live updates accumulate history below</span>
+</div>
+<div id=sparklineSvgContainer class="w-full h-24">
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3 max-w-xs mx-auto mt-6">
+<button id=downloadBtn class="flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-zinc-950 hover:bg-zinc-90 w-full text-zinc-200 text-xs font-semibold border border-zinc-800 hover:border-zinc-700 hover:text-white transition-all">
+<svg xmlns=http://www.w3.org/2000/svg width=14 height=14 viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2.5 stroke-linecap=round stroke-linejoin=round><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1=12 x2=12 y1=15 y2=3 /></svg>
+Download HD
+</button>
+<button id=previewBtn class="flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-zinc-950 hover:bg-zinc-90 w-full text-zinc-200 text-xs font-semibold border border-zinc-800 hover:border-zinc-700 hover:text-white transition-all">
+<svg xmlns=http://www.w3.org/2000/svg width=14 height=14 viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2.5 stroke-linecap=round stroke-linejoin=round><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0z"/><circle cx=12 cy=12 r=3 /></svg>
+Preview DP
+</button>
+</div>
+</div>
+</section>
+<div id=popularSection class="bg-zinc-950/45 border border-zinc-900/80 rounded-2xl p-6">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-sm font-bold text-white uppercase tracking-wider font-display flex items-center gap-2">
+<svg class="h-4 w-4 text-amber-500" xmlns=http://www.w3.org/2005/svg fill=none viewBox="0 0 24 24" stroke=currentColor stroke-width=2>
+<path stroke-linecap=round stroke-linejoin=round d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+<path stroke-linecap=round stroke-linejoin=round d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+</svg>
+Popular Live Accounts
+</h3>
+<span class="text-[10px] text-zinc-500 font-mono">click to switch track target</span>
+</div>
+<div id=popularGrid class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+</div>
+<div class=mt-8>
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-sm font-bold text-white uppercase tracking-wider font-display flex items-center gap-2">
+<svg class="h-4 w-4 text-sky-500" xmlns=http://www.w3.org/2000/svg fill=none viewBox="0 0 24 24" stroke=currentColor stroke-width=2>
+<path stroke-linecap=round stroke-linejoin=round d="M12 8c1.657 0 3 1.343 3 3v7h-6v-7c0-1.657 1.343-3 3-3z"/>
+<path stroke-linecap=round stroke-linejoin=round d="M5 20h14"/>
+</svg>
+Trending Accounts
+</h3>
+<span class="text-[10px] text-zinc-500 font-mono">tap to track a trending username</span>
+</div>
+<div id=trendingGrid class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+</div>
+</div>
+<div id=promoSection class="bg-zinc-950/45 border border-zinc-900/80 rounded-2xl p-6 mt-8">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-sm font-bold text-white uppercase tracking-wider font-display flex items-center gap-2">
+<svg class="h-4 w-4 text-rose-500" xmlns=http://www.w3.org/2000/svg fill=none viewBox="0 0 24 24" stroke=currentColor stroke-width=2>
+<path stroke-linecap=round stroke-linejoin=round d="M13 16h-1v-4h-1m1-4h.01M12 3a9 9 0 100 18 9 9 0 000-18z"/>
+</svg>
+Promotional Accounts
+</h3>
+<span class="text-[10px] text-zinc-500 font-mono">Featured accounts for brand updates</span>
+</div>
+<div id=promoGrid class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+</div>
+</div>
+<div id=historySection class="hidden bg-zinc-950/45 border border-zinc-900/80 rounded-2xl p-5">
+<div class="flex items-center justify-between mb-3.5">
+<div class="flex items-center gap-2">
+<svg class="h-4 w-4 text-zinc-400" xmlns=http://www.w3.org/2000/svg fill=none viewBox="0 0 24 24" stroke=currentColor stroke-width=2>
+<path stroke-linecap=round stroke-linejoin=round d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+</svg>
+<h3 class="text-xs font-semibold text-zinc-300 uppercase tracking-widest font-display">
+Recent Tracks logs
+</h3>
+</div>
+<button id=clearHistoryBtn class="text-[10px] text-zinc-500 hover:text-rose-400 transition-colors font-mono">
+Clear Cache logs
+</button>
+</div>
+<div id=historyTagsContainer class="flex flex-wrap gap-2.5">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-zinc-950/30 border border-zinc-900 p-4 rounded-xl">
+<div class="flex items-center gap-2 mb-2 text-white">
+<svg class="h-4 w-4 text-rose-500" xmlns=http://www.w3.org/2000/svg fill=none viewBox="0 0 24 24" stroke=currentColor stroke-width=2>
+<path stroke-linecap=round stroke-linejoin=round d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+</svg>
+<h4 class="text-xs uppercase font-bold tracking-wider font-display font-semibold">Third-Party API Integration</h4>
+</div>
+<p class="text-xs text-zinc-400 leading-relaxed">
+We use reliable third-party APIs to fetch and display real-time statistics with high accuracy. Data is updated dynamically to provide the latest available counts while minimizing delays and ensuring a smooth user experience.
+</p>
+</div>
+<div class="bg-zinc-950/30 border border-zinc-900 p-4 rounded-xl">
+<div class="flex items-center gap-2 mb-2 text-white">
+<svg class="h-4 w-4 text-pink-500" xmlns=http://www.w3.org/2000/svg fill=none viewBox="0 0 24 24" stroke=currentColor stroke-width=2>
+<path stroke-linecap=round stroke-linejoin=round d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+</svg>
+<h4 class="text-xs uppercase font-bold tracking-wider font-display font-semibold font-semibold">Fast Data Refresh</h4>
+</div>
+<p class="text-xs text-zinc-400 leading-relaxed">
+Our system refreshes statistics at regular intervals to ensure you receive the latest available data from our third-party API providers with minimal delay.
+</p>
+</div>
+<div class="bg-zinc-950/30 border border-zinc-900 p-4 rounded-xl">
+<div class="flex items-center gap-2 mb-2 text-white">
+<svg class="h-4 w-4 text-amber-500" xmlns=http://www.w3.org/2000/svg fill=none viewBox="0 0 24 24" stroke=currentColor stroke-width=2>
+<path stroke-linecap=round stroke-linejoin=round d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+</svg>
+<h4 class="text-xs uppercase font-bold tracking-wider font-display font-semibold font-semibold">Seamless Visual Updates</h4>
+</div>
+<p class="text-xs text-zinc-400 leading-relaxed">
+Our interface uses optimized animations to present changing statistics naturally and smoothly, ensuring a responsive experience without sacrificing performance.
+</p>
+</div>
+</div>
 <section class=mb-20>
 <div class="space-y-6 mt-8 pt-8 border-t border-[#262626]">
 <div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
@@ -509,47 +404,114 @@ Instagram can change quickly. A viral Instagram Reel can generate large amounts 
 <p class=text-gray-400>
 Businesses also have different uses for a follower tracking system as compared to creators. They may want to see if a marketing campaign is working to drive traffic toward an individual product, or they may just want to know if they have attracted more followers after launching a new product, and using a follower tracking solution will help them to know if they are gaining more followers after a marketing campaign.</p>
 <p class=text-gray-400>Social media managers and agencies can also utilize a follower tracking service to measure how well each of their clients' accounts are performing. Rather than having to check each account individually, they can check all the various accounts at the same time so they can see how each of them is performing relative to all of the other accounts.</p>
-
-
-
-</main>
-  <!-- InstaDP Footer -->
-  <footer class="bg-black border-t border-[#262626] py-12">
-    <div class="max-w-7xl mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="text-center md:text-left">
-          <div class="flex items-center justify-center md:justify-start gap-2 mb-4">
-            
-            <span class="font-bold text-lg text-white">InstaDP</span>
-          </div>
-          <p class="text-gray-500 text-sm">Download Instagram profile pictures in high resolution for free.</p>
-        </div>
-        <div class="text-center md:text-left">
-          <h3 class="font-bold text-lg mb-4 text-white">Quick Links</h3>
-          <div class="space-y-2">
-            <a href="/" class="text-gray-400 hover:text-white transition-colors text-sm block">Home</a>
-            <a href="/about" class="text-gray-400 hover:text-white transition-colors text-sm block">About</a>
-            <a href="/blog" class="text-gray-400 hover:text-white transition-colors text-sm block">Blog</a>
-          </div>
-        </div>
-        <div class="text-center md:text-left">
-          <h3 class="font-bold text-lg mb-4 text-white">Legal</h3>
-          <div class="space-y-2">
-            <a href="/privacy" class="text-gray-400 hover:text-white transition-colors text-sm block">Privacy Policy</a>
-            <a href="/disclaimer" class="text-gray-400 hover:text-white transition-colors text-sm block">Disclaimer</a>
-          </div>
-        </div>
-      </div>
-      <div class="border-t border-[#262626] mt-8 pt-8 text-center">
-        <p class="text-gray-500 text-sm">© 2026 InstaDP. Not affiliated with Instagram or Meta.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Script logic file links -->
-  <script src="/menu.js"></script>
-  <script src="/liveromit.js"></script>
-  <script>lucide.createIcons();</script>
-
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h2 class="font-bold text-lg mb-2 text-white">The Importance of Real-Time Tracking</h2>
+<p class=text-gray-400>Instagram is fast-paced. Videos that you create can go viral while you’re asleep. Collaboration with another profile may result in introducing your Instagram profile to thousands of new people in only one day. Growth may happen over time but can also happen overnight.</p>
+<p class=text-gray-400>Using real-time tracking for your followers allows you to see these types of occurrences in real time. Many creators like to review how many followers they’ve gained immediately after posting new content because they’ll know how successful their content is. If your followers continue to grow quickly, it may suggest that the content is being shown to a larger audience.</p>
+<p class=text-gray-400>While follower counts shouldn’t be your only concern, they will give you valuable insight into what is working and what isn’t</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h2 class="font-bold text-lg mb-2 text-white">Instagram Growth Isn't Always Linear</h2>
+<p class=text-gray-400>Many people have made the mistake of believing their follower count will grow steadily day-to-day.</p>
+<p class=text-gray-400>In reality, Instagram's growth is rarely straight and consistent in the number of followers you gain on any given day. In some instances, you gain followers and in others you lose them. Every type of account, even the biggest creators, experiences this.</p>
+<p class=text-gray-400>What matters is the direction and trend of the growth. If you're increasing your number of followers progressively month after month, you're on the right track. Daily gradual increases and decreases are common and shouldn't cause you distress.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h2 class="font-bold text-lg mb-2 text-white">How Does Your Instagram Account Grow so Much All of a Sudden?</h2>
+<p class=text-gray-400>There are many possible reasons you can experience a recent spike in your follower count on Instagram.</p>
+<p class=text-gray-400>One of the most common reasons for gaining followers is an increasingly popular Reel. The way Instagram's algorithm works allows users who don't yet follow you to see your Reels often. If someone likes what they see, they'll likely want to follow your account for more content.</p>
+<p class=text-gray-400>
+Another major reason for followers coming to you quickly is through collaboration. When two people collaborate on a project, both audiences get to see new content and personalities. This means that you can both gain new followers.</p>
+<p class=text-gray-400>There are so many things that can create sudden spikes in your follower counts - trending topics and viral moments, giveaways, news stories, a larger user's share, and much more.</p>
+<p class=text-gray-400>Because of the many ways to gain followers, you should pay close attention to how each of your posts performs in terms of gaining followers.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h2 class="font-bold text-lg mb-2 text-white">The Truth About Growing Instagram Followers</h2>
+<p class=text-gray-400>People often waste time seeking out quick methods to grow their Instagram followers. They look for hacks to get immediate results, such as "follow me" lists or how to get thousands of followers in a matter of hours.</p>
+<p class=text-gray-400>Unfortunately, most of these methods will not produce long-term effects.</p>
+<p class=text-gray-400>Authentic growth normally occurs when an account creates material that is worth seeing and/or sharing. Accounts that are committed to adding value to their audience typically have a larger audience base as they develop over time.</p>
+<p class=text-gray-400>Many creators have experienced continuous growth because they continue to show up, try new and interesting things, and work on enhancing their creativity rather than searching for shortcuts.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h2 class="font-bold text-lg mb-2 text-white">Check Any Public Instagram Profile</h2>
+<p class=text-gray-400>Using our Instagram Followers Counter, you can quickly check how many followers a public Instagram account is currently displaying. There is no difficult or complicated way of doing this; everything is simple and easy to use. All you need is the user name and you will be able to get an up-to-date follower count in only seconds.</p>
+<p class=text-gray-400>This tool is great for a variety of reasons (tracking the growth of your own account, monitoring competitors' accounts, researching influencers' accounts, etc.), but most importantly - it is a quick and easy way to keep track of accounts.</p>
+</div>
+</div>
+</section>
+<section id=faq class=mb-20>
+<div class="flex items-center gap-3 mb-8 justify-center">
+<i data-lucide=help-circle class="w-8 h-8 instagram-gradient-text"></i>
+<h2 class="text-3xl font-bold text-white">Frequently Asked Questions</h2>
+</div>
+<div class=space-y-4>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h3 class="font-bold text-lg mb-2 text-white">Is it possible to view someone else’s follower count on Instagram?</h3>
+<p class=text-gray-400>Yes, you may be able to see the number of followers of any public Instagram account (other than your own) by entering the username of the account into the tool. You will be given the most recent follower stats.</p>
+<p class=text-gray-400>This can help you keep track of influencers, creators, brands, celebrities, or competitors. However, if the account is private, you will not be able to see some information that would normally be available because of Instagram’s privacy restrictions.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h3 class="font-bold text-lg mb-2 text-white">Does the follower count update immediately?</h3>
+<p class=text-gray-400>The tool is meant to reflect current data; however, people continue to follow and unfollow Instagram accounts frequently, therefore there could be minor differences.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h3 class="font-bold text-lg mb-2 text-white">Can I Check Private Insta Accounts?</h3>
+<p class=text-gray-400>No. Users are only granted limited access to view private Instagram accounts since these users intentionally restrict their profile information to people they approve. You can only access information through the Instagram Followers Counter if it is publicly accessible on Instagram, and therefore you will not be able to access all of the information from private accounts.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h3 class="font-bold text-lg mb-2 text-white">Is There a Limit to How Many Usernames I Can Search?</h3>
+<p class=text-gray-400>You will have no limit regarding how many different usernames you can search for on Instagram at any given time, allowing you to track various creators, brands, influencers, and competitors through a simple method.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h3 class="font-bold text-lg mb-2 text-white">Are follower counts always accurate?</h3>
+<p class=text-gray-400>Follower numbers are usually correct according to publicly available data. Since Instagram continuously updates follower count data, differences may be noticed at times. </p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h3 class="font-bold text-lg mb-2 text-white">What is the benefit of using a follower counter instead of Instagram?</h3>
+<p class=text-gray-400>Utilizing a follower counter offers quicker access to follower metrics rather than having to constantly go back into Instagram to repeatedly re-load profiles. A follower counter would allow creators, marketers, and businesses that track several accounts to see all of their follower metrics in one place, saving time and effort from going back into the app multiple times a day.</p>
+</div>
+<div class="bg-[#121212] p-6 rounded-2xl border border-[#262626]">
+<h3 class="font-bold text-lg mb-2 text-white">Is the Insta Followers Counter Free to Use?</h3>
+<p class=text-gray-400>Yes, you can. The Followers Counter will allow you to view a public Instagram user’s follower numbers without having to create a username/password account, download software and/or pay for a subscription fee.</p>
+</div>
+</div></section></div></main>
+<footer class="bg-black border-t border-[#262626] py-12">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="text-center md:text-left">
+<div class="flex items-center justify-center md:justify-start gap-2 mb-4">
+<span class="font-bold text-lg text-white">
+InstaDP<span class=instagram-gradient-text>download.com</span>
+</span>
+</div>
+<p class="text-gray-500 text-sm">Download Instagram profile pictures in high resolution for free.</p>
+</div>
+<div class="text-center md:text-left">
+<h3 class="font-bold text-lg mb-4 text-white">Quick Links</h3>
+<div class=space-y-2>
+<a href=/ class="text-gray-400 hover:text-white transition-colors text-sm block">Home</a>
+<a href=/about class="text-gray-400 hover:text-white transition-colors text-sm block">About</a>
+<a href=/blog class="text-gray-400 hover:text-white transition-colors text-sm block">Blog</a>
+</div>
+</div>
+<div class="text-center md:text-left">
+<h3 class="font-bold text-lg mb-4 text-white">Legal</h3>
+<div class=space-y-2>
+<a href=/privacy class="text-gray-400 hover:text-white transition-colors text-sm block">Privacy Policy</a>
+<a href=/disclaimer class="text-gray-400 hover:text-white transition-colors text-sm block">Disclaimer</a>
+</div>
+</div>
+</div>
+<div class="border-t border-[#262626] mt-8 pt-8 text-center">
+<p class="text-gray-500 text-sm">
+© 2026 InstaDPdownload.com — Not affiliated with Instagram or Meta.
+</p>
+</div>
+</div>
+</footer>
+<script src=/menu.js></script>
+<script src=/liveromit.js></script>
+<script>lucide.createIcons()</script>
 </body>
 </html>

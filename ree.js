@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // CONFIG
     // =====================================
     const API_BASE =
-        "https://fbapp.romitkryadav.workers.dev";
+        "https://instacombo.romitkryadav.workers.dev";
 
     // =====================================
     // ICONS

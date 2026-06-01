@@ -28,36 +28,20 @@
 <link rel=stylesheet href=/romitstyle.css>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel=stylesheet>
 <script src=https://unpkg.com/lucide@latest></script>
-<style>
-body{font-family:Inter,sans-serif}
-.scroll-mt-20{scroll-margin-top:5rem}
-@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
-.animate-spin{animation:spin 1s linear infinite}
-.hidden{display:none}
-/* Instagram theme colors */
-.instagram-gradient {
-    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f77737, #fcaf45, #ffdc80);
-}
-.instagram-gradient-text {
-    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f77737, #fcaf45, #ffdc80);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-</style>
+<style>body{font-family:Inter,sans-serif}.scroll-mt-20{scroll-margin-top:5rem}@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}.animate-spin{animation:spin 1s linear infinite}.hidden{display:none}.instagram-gradient{background:linear-gradient(45deg,#405de6,#5851db,#833ab4,#c13584,#e1306c,#fd1d1d,#f77737,#fcaf45,#ffdc80)}.instagram-gradient-text{background:linear-gradient(45deg,#405de6,#5851db,#833ab4,#c13584,#e1306c,#fd1d1d,#f77737,#fcaf45,#ffdc80);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}</style>
 </head>
 <body class="min-h-screen bg-black text-white selection:bg-blue-500/30">
 <nav class="bg-black border-b border-[#262626] sticky top-0 z-50">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="flex justify-between h-16 items-center">
 <a href=/ class="flex items-center space-x-2 group">
-<img src=/instalogo.png alt="InstaDP Logo" class="w-10 h-10 object-contain">
-<span class="text-xl font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DP</span></span>
+<span class="text-xl font-bold text-white tracking-tight">Insta<span class=instagram-gradient-text>DP</span></span>
 </a>
 <div id=desktopMenu class="desktop-menu space-x-8 text-sm font-medium text-gray-400">
 <a href=/ class="hover:text-white transition-colors">Home</a>
+<a href=/instagram-reel-downloader.html class="hover:text-white transition-colors">Reel Downloader</a>
+<a href=/instagram-followers-counter.html class="hover:text-white transition-colors">Follower Counter</a>
 <a href=https://threadsgrab.com/ class="hover:text-white transition-colors">Threads Downloader</a>
-<a href=https://fbviddl.com/ class="hover:text-white transition-colors">Facebook Downloader</a>
 <a href=/about class="hover:text-white transition-colors">About</a>
 <a href=/blog class="hover:text-white transition-colors">Blog</a>
 </div>
@@ -75,8 +59,7 @@ body{font-family:Inter,sans-serif}
 <div class="flex flex-col h-full">
 <div class="h-16 flex items-center justify-between px-6 border-b border-[#262626]">
 <a href=/ class="flex items-center space-x-2">
-<img src=/instalogo.png alt="InstaDP Logo" class="w-8 h-8 object-contain">
-<span class="text-base font-bold text-white tracking-tight">Insta<span class="instagram-gradient-text">DP</span></span>
+<span class="text-base font-bold text-white tracking-tight">Insta<span class=instagram-gradient-text>DP</span></span>
 </a>
 <button id=closeMenuBtn class="p-2 text-gray-400 hover:text-white transition-colors">
 <svg class="w-6 h-6" fill=none stroke=currentColor viewBox="0 0 24 24">
@@ -89,11 +72,14 @@ body{font-family:Inter,sans-serif}
 <a href=/ class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
 Home
 </a>
+<a href=/instagram-reel-downloader.html class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
+Reel Downloader
+</a>
+<a href=/instagram-followers-counter.html class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
+Follower Counter
+</a>
 <a href=https://threadsgrab.com/ class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
 Threads Downloader
-</a>
-<a href=https://fbviddl.com/ class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
-Facebook Downloader
 </a>
 <a href=/about class="flex items-center px-6 py-4 text-gray-400 font-medium hover:bg-[#1c1c1c] hover:text-white border-b border-[#262626] transition-all">
 About
@@ -112,7 +98,7 @@ Blog
 <i data-lucide=check-circle-2 class="w-10 h-10 text-green-400"></i>
 </div>
 <h1 class="text-4xl sm:text-5xl font-extrabold mb-4 tracking-tight">
-Thank <span class="instagram-gradient-text">You!</span>
+Thank <span class=instagram-gradient-text>You!</span>
 </h1>
 <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-12">
 Your message has been sent successfully. We will get back to you as soon as possible.
@@ -128,7 +114,6 @@ Back to Home
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <div class="text-center md:text-left">
 <div class="flex items-center justify-center md:justify-start gap-2 mb-4">
-<img src=/instalogo.png alt="InstaDP Logo" class="w-8 h-8 object-contain">
 <span class="font-bold text-lg text-white">InstaDP</span>
 </div>
 <p class="text-gray-500 text-sm">
