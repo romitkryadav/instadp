@@ -1,1 +1,200 @@
-const WORKERS=["https://instadp.romitkr5539.workers.dev","https://instadp2.romitkr3018.workers.dev","https://instadp3.romitkryadav5539.workers.dev","https://instadp4.contact-themistero.workers.dev","https://instadp5.romitkr1815130920.workers.dev","https://instadp6.romityadav5539.workers.dev","https://instadp7.r18151309.workers.dev",],cache=new Map;let currentResult=null;const searchForm=document.getElementById("searchForm"),usernameInput=document.getElementById("usernameInput"),submitBtn=document.getElementById("submitBtn"),btnText=document.getElementById("btnText"),loadingIcon=document.getElementById("loadingIcon"),loadingState=document.getElementById("loadingState"),errorState=document.getElementById("errorState"),errorMessage=document.getElementById("errorMessage"),resultSection=document.getElementById("resultSection"),profileImg=document.getElementById("profileImg"),resUsername=document.getElementById("resUsername"),resFullName=document.getElementById("resFullName"),resBio=document.getElementById("resBio"),downloadBtn=document.getElementById("downloadBtn"),previewBtn=document.getElementById("previewBtn"),igLink=document.getElementById("igLink");function getCleanUsername(e){let t=e.trim();try{if(t.includes("instagram.com")){let r=new URL(t.startsWith("http")?t:`https://${t}`).pathname.split("/").filter(Boolean);r.length&&(t=r[0])}}catch{}return t.startsWith("@")&&(t=t.slice(1)),t}function isValidUsername(e){return/^[a-zA-Z0-9._]{2,30}$/.test(e)}function setLoading(e){submitBtn.disabled=e,btnText.classList.toggle("hidden",e),loadingIcon.classList.toggle("hidden",!e),loadingState.classList.toggle("hidden",!e)}function fetchWithTimeout(e,t=8e3){let r=new AbortController,n=setTimeout(()=>r.abort(),t);return fetch(e,{signal:r.signal}).finally(()=>clearTimeout(n))}function fetchOne(e){return new Promise((t,r)=>{let n=!1,a=WORKERS.length;WORKERS.forEach(async s=>{try{let i=await fetchWithTimeout(`${s}?username=${e}`);if(!i.ok)throw Error("bad status");let l=await i.json();if(l?.status==="success"&&l.image?.startsWith("http"))n||(n=!0,t({data:l,worker:s}));else throw Error("invalid data")}catch{}finally{0!=--a||n||r(Error("All workers failed"))}})})}async function fetchSmart(e){try{return await fetchOne(e)}catch{return await new Promise(e=>setTimeout(e,1500)),await fetchOne(e)}}async function fetchWithCache(e){if(cache.has(e))return cache.get(e);let t=await fetchSmart(e);return cache.set(e,t),setTimeout(()=>cache.delete(e),12e4),t}function displayResult(e,t){currentResult={...e,worker:t};let r=`${t}?proxy=${encodeURIComponent(e.image)}`;profileImg.style.opacity="0.3",profileImg.style.filter="blur(8px)";let n=new Image;n.onload=()=>{profileImg.src=e.image,profileImg.style.opacity="1",profileImg.style.filter="none"},n.onerror=()=>{profileImg.src=r,profileImg.style.opacity="1",profileImg.style.filter="none"},n.src=e.image,setTimeout(()=>{n.complete&&0!==n.naturalWidth||(profileImg.src=r,profileImg.style.opacity="1",profileImg.style.filter="none")},2500),resUsername.textContent=`@${e.username}`,resFullName.textContent=e.full_name||"Instagram User",resBio.textContent=e.biography||"",igLink.href=`https://instagram.com/${e.username}`,resultSection.classList.remove("hidden"),setTimeout(()=>{resultSection.scrollIntoView({behavior:"smooth",block:"start"})},100)}function showError(e){errorMessage.textContent=e,errorState.classList.remove("hidden")}searchForm.addEventListener("submit",async e=>{e.preventDefault();let t=getCleanUsername(usernameInput.value);if(!t||!isValidUsername(t))return showError("Invalid username");setLoading(!0),errorState.classList.add("hidden"),resultSection.classList.add("hidden"),currentResult=null;try{let{data:r,worker:n}=await fetchWithCache(t);displayResult(r,n)}catch{showError("User not found or blocked by Instagram.")}finally{setLoading(!1)}}),downloadBtn.addEventListener("click",async()=>{if(!currentResult?.image)return;let{worker:e,image:t,username:r}=currentResult,n=`${e}?proxy=${encodeURIComponent(t)}`;try{let a=await fetch(n),s=await a.blob(),i=document.createElement("a");i.href=URL.createObjectURL(s),i.download=`instagram_${r}.jpg`,i.click()}catch{window.open(n,"_blank")}}),previewBtn.addEventListener("click",()=>{currentResult?.image&&window.open(currentResult.image,"_blank")});
+const WORKERS = [
+  "https://instadp.romitkr5539.workers.dev",
+  "https://instadp2.romitkr3018.workers.dev",
+  "https://instadp3.romitkryadav5539.workers.dev",
+  "https://instadp4.contact-themistero.workers.dev",
+  "https://instadp5.romitkr1815130920.workers.dev",
+  "https://instadp6.romityadav5539.workers.dev",
+  "https://instadp7.r18151309.workers.dev",
+];
+
+const cache = new Map();
+let currentResult = null;
+
+const searchForm = document.getElementById("searchForm"),
+  usernameInput = document.getElementById("usernameInput"),
+  submitBtn = document.getElementById("submitBtn"),
+  btnText = document.getElementById("btnText"),
+  loadingIcon = document.getElementById("loadingIcon"),
+  loadingState = document.getElementById("loadingState"),
+  errorState = document.getElementById("errorState"),
+  errorMessage = document.getElementById("errorMessage"),
+  resultSection = document.getElementById("resultSection"),
+  profileImg = document.getElementById("profileImg"),
+  resUsername = document.getElementById("resUsername"),
+  resFullName = document.getElementById("resFullName"),
+  resBio = document.getElementById("resBio"),
+  downloadBtn = document.getElementById("downloadBtn"),
+  previewBtn = document.getElementById("previewBtn"),
+  igLink = document.getElementById("igLink");
+
+function getCleanUsername(raw) {
+  let t = raw.trim();
+  try {
+    if (t.includes("instagram.com")) {
+      let r = new URL(t.startsWith("http") ? t : `https://${t}`);
+      let n = r.pathname.split("/").filter(Boolean);
+      if (n.length) t = n[0];
+    }
+  } catch {}
+  if (t.startsWith("@")) t = t.slice(1);
+  return t;
+}
+
+function isValidUsername(e) {
+  return /^[a-zA-Z0-9._]{2,30}$/.test(e);
+}
+
+function setLoading(e) {
+  submitBtn.disabled = e;
+  btnText.classList.toggle("hidden", e);
+  loadingIcon.classList.toggle("hidden", !e);
+  loadingState.classList.toggle("hidden", !e);
+}
+
+function fetchWithTimeout(url, ms = 8000) {
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), ms);
+  return fetch(url, { signal: controller.signal }).finally(() => clearTimeout(id));
+}
+
+/**
+ * Fires requests to ALL workers at the same time.
+ * Resolves as soon as the first worker returns a valid successful response.
+ * Rejects only if every single worker fails.
+ */
+function fetchOne(username) {
+  return new Promise((resolve, reject) => {
+    let settled = false;
+    let remaining = WORKERS.length;
+
+    WORKERS.forEach(async (worker) => {
+      try {
+        const res = await fetchWithTimeout(`${worker}?username=${username}`);
+        if (!res.ok) throw new Error("bad status");
+
+        const data = await res.json();
+        if (data?.status === "success" && data.image?.startsWith("http")) {
+          if (!settled) {
+            settled = true;
+            resolve({ data, worker });
+          }
+        } else {
+          throw new Error("invalid data");
+        }
+      } catch {
+        // this worker failed — ignore, let the others keep racing
+      } finally {
+        remaining--;
+        if (remaining === 0 && !settled) {
+          reject(new Error("All workers failed"));
+        }
+      }
+    });
+  });
+}
+
+async function fetchSmart(username) {
+  try {
+    return await fetchOne(username);
+  } catch {
+    await new Promise((r) => setTimeout(r, 1500));
+    return await fetchOne(username);
+  }
+}
+
+async function fetchWithCache(username) {
+  if (cache.has(username)) return cache.get(username);
+  const result = await fetchSmart(username);
+  cache.set(username, result);
+  setTimeout(() => cache.delete(username), 120000);
+  return result;
+}
+
+function displayResult(data, worker) {
+  currentResult = { ...data, worker };
+  const proxyUrl = `${worker}?proxy=${encodeURIComponent(data.image)}`;
+
+  profileImg.style.opacity = "0.3";
+  profileImg.style.filter = "blur(8px)";
+
+  const img = new Image();
+  img.onload = () => {
+    profileImg.src = data.image;
+    profileImg.style.opacity = "1";
+    profileImg.style.filter = "none";
+  };
+  img.onerror = () => {
+    profileImg.src = proxyUrl;
+    profileImg.style.opacity = "1";
+    profileImg.style.filter = "none";
+  };
+  img.src = data.image;
+
+  setTimeout(() => {
+    if (!img.complete || img.naturalWidth === 0) {
+      profileImg.src = proxyUrl;
+      profileImg.style.opacity = "1";
+      profileImg.style.filter = "none";
+    }
+  }, 2500);
+
+  resUsername.textContent = `@${data.username}`;
+  resFullName.textContent = data.full_name || "Instagram User";
+  resBio.textContent = data.biography || "";
+  igLink.href = `https://instagram.com/${data.username}`;
+  resultSection.classList.remove("hidden");
+
+  setTimeout(() => {
+    resultSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, 100);
+}
+
+function showError(msg) {
+  errorMessage.textContent = msg;
+  errorState.classList.remove("hidden");
+}
+
+searchForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const username = getCleanUsername(usernameInput.value);
+
+  if (!username || !isValidUsername(username)) {
+    return showError("Invalid username");
+  }
+
+  setLoading(true);
+  errorState.classList.add("hidden");
+  resultSection.classList.add("hidden");
+  currentResult = null;
+
+  try {
+    const { data, worker } = await fetchWithCache(username);
+    displayResult(data, worker);
+  } catch {
+    showError("User not found or blocked by Instagram.");
+  } finally {
+    setLoading(false);
+  }
+});
+
+downloadBtn.addEventListener("click", async () => {
+  if (!currentResult?.image) return;
+  const { worker, image, username } = currentResult;
+  const proxyUrl = `${worker}?proxy=${encodeURIComponent(image)}`;
+
+  try {
+    const res = await fetch(proxyUrl);
+    const blob = await res.blob();
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = `instagram_${username}.jpg`;
+    a.click();
+  } catch {
+    window.open(proxyUrl, "_blank");
+  }
+});
+
+previewBtn.addEventListener("click", () => {
+  if (currentResult?.image) window.open(currentResult.image, "_blank");
+});
